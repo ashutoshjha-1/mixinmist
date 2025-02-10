@@ -32,13 +32,6 @@ export const PricingCard = ({ title, features, highlight, popular }: PricingCard
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-2 px-4 rounded-full transition-all duration-300 ${
-        highlight 
-          ? 'bg-primary text-white hover:bg-primary-hover' 
-          : 'border-2 border-primary/20 hover:border-primary/40 text-text-muted hover:text-text'
-      }`}>
-        Get Started
-      </button>
     </div>
   );
 };
