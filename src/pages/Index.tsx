@@ -1,3 +1,4 @@
+
 import { Heart, Package, Star, Crown, Flower2, LeafyGreen, SprayCan, Globe, Gauge, Palette, Layers, Layout, Settings } from "lucide-react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -14,8 +15,8 @@ const Index = () => {
           Build & Scale Your Beauty Brand
         </h1>
         <p className="animate-fade-in mt-6 max-w-2xl text-lg text-text-muted">
-          Transform your vision into reality with Mixinmist. Create your own premium beauty brand with zero minimums, 
-          zero commitment, and zero risk. Get a custom domain website and fully equipped dashboard to manage everything.
+          Transform your vision into reality with Mixinmist. We handle all costs and shipping while you focus on growing your brand. 
+          Get a custom domain website and fully equipped dashboard to manage everything with zero upfront investment.
         </p>
         <div className="animate-fade-in-up mt-8">
           <WaitlistForm />
@@ -27,23 +28,23 @@ const Index = () => {
         <h2 className="mb-4 text-center text-4xl font-bold text-text">Why Choose Mixinmist</h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
           We've revolutionized the beauty industry by making it easier than ever to launch your own brand. 
-          Our platform combines quality, flexibility, and simplicity.
+          No hidden costs - we handle everything from production to shipping.
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <FeatureCard
             icon={Heart}
-            title="Personalized Products"
-            description="Create unique formulations and customize packaging to match your brand vision perfectly"
+            title="Private Label Products"
+            description="Create your own brand with our premium private label products - we handle manufacturing and logistics"
           />
           <FeatureCard
             icon={Package}
-            title="Zero Minimums"
-            description="Start with as little as one unit and scale at your own pace with no minimum orders"
+            title="Free Shipping"
+            description="We cover all shipping costs for your orders, helping you maximize your profits"
           />
           <FeatureCard
             icon={Star}
-            title="Premium Quality"
-            description="All products are vegan, cruelty-free, and made in North America with sustainable practices"
+            title="Zero Hidden Costs"
+            description="No upfront fees or hidden charges - only pay for what you sell"
           />
           <FeatureCard
             icon={Crown}
@@ -108,23 +109,23 @@ const Index = () => {
       <section className="container mx-auto px-4 py-20 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-3xl">
         <h2 className="mb-4 text-center text-4xl font-bold text-text">The Mixinmist Advantage</h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
-          Experience the perfect blend of quality, sustainability, and innovation
+          We handle the complex stuff so you can focus on growing your brand
         </p>
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col items-center text-center p-6 glass-card rounded-2xl hover-lift">
             <Flower2 className="mb-4 h-12 w-12 text-primary" />
-            <h3 className="mb-2 text-xl font-semibold">Premium Formulations</h3>
-            <p className="text-text-muted">Access to 400+ beauty and wellness products, with new launches every month</p>
+            <h3 className="mb-2 text-xl font-semibold">All-Inclusive Service</h3>
+            <p className="text-text-muted">We handle manufacturing, storage, shipping, and customer support - you focus on sales</p>
           </div>
           <div className="flex flex-col items-center text-center p-6 glass-card rounded-2xl hover-lift">
             <LeafyGreen className="mb-4 h-12 w-12 text-primary" />
-            <h3 className="mb-2 text-xl font-semibold">Sustainable Choice</h3>
-            <p className="text-text-muted">Eco-friendly packaging and responsible manufacturing practices</p>
+            <h3 className="mb-2 text-xl font-semibold">Risk-Free Model</h3>
+            <p className="text-text-muted">No upfront investment needed - we handle all production and shipping costs</p>
           </div>
           <div className="flex flex-col items-center text-center p-6 glass-card rounded-2xl hover-lift">
             <SprayCan className="mb-4 h-12 w-12 text-primary" />
             <h3 className="mb-2 text-xl font-semibold">Full Control</h3>
-            <p className="text-text-muted">Complete customization of your product line with expert support</p>
+            <p className="text-text-muted">Your brand, your rules - complete customization with our support</p>
           </div>
         </div>
       </section>
