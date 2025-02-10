@@ -28,6 +28,9 @@ const Index = () => {
         <div className="relative">
           <HeroSection />
         </div>
+
+        {/* Wave border at bottom of hero */}
+        <div className="hero-wave-border" />
       </div>
 
       {/* Rest of the content without gradient */}
