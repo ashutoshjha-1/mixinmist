@@ -20,10 +20,6 @@ export const HeroSection = () => {
         We've taken a complex process and made it simple. With a digital solution that gives you 
         the power to personalize, customize, launch, and scale a branded product line on your terms.
       </p>
-      <p className="animate-fade-in mt-4 max-w-2xl text-base text-text-muted">
-        Think of us as your curator of all things self care - we're here to help you design and launch 
-        your own private label product line with precision and ease.
-      </p>
       <div className={`animate-fade-in-up ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
         <WaitlistForm />
       </div>

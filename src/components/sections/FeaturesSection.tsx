@@ -6,6 +6,10 @@ export const FeaturesSection = () => {
   return (
     <section className="container mx-auto px-4 py-20">
       <h2 className="mb-4 text-center text-4xl font-bold text-text">Why Choose Mixinmist</h2>
+      <p className="mx-auto mb-4 max-w-2xl text-center text-text-muted">
+        Think of us as your curator of all things self care - we're here to help you design and launch 
+        your own private label product line with precision and ease.
+      </p>
       <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
         Everything you need to launch and scale your beauty brand
       </p>
