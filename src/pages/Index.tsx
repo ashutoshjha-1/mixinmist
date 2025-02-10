@@ -1,5 +1,5 @@
 
-import { Heart, Package, Star, Crown } from "lucide-react";
+import { Heart, Package, Star, Crown, Flower2, LeafyGreen, SprayCan } from "lucide-react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { FeatureCard } from "@/components/FeatureCard";
 
@@ -9,13 +9,14 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center">
         <span className="animate-fade-in rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-          Coming Soon
+          Join the Beauty Revolution
         </span>
         <h1 className="animate-fade-in mt-6 max-w-4xl bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-5xl font-bold text-transparent sm:text-6xl md:text-7xl">
           Build & Scale Your Beauty Brand
         </h1>
         <p className="animate-fade-in mt-6 max-w-2xl text-lg text-text-muted">
-          Just add your logo. Mixinmist handles the rest. Create your own beauty brand with zero minimums, zero commitment, and zero risk.
+          Transform your vision into reality with Mixinmist. Create your own premium beauty brand with zero minimums, 
+          zero commitment, and zero risk. Our curated collection of vegan, cruelty-free products awaits your personal touch.
         </p>
         <div className="animate-fade-in-up mt-8">
           <WaitlistForm />
@@ -24,54 +25,88 @@ const Index = () => {
 
       {/* Features Section */}
       <section className="container mx-auto px-4 py-20">
-        <h2 className="mb-12 text-center text-4xl font-bold text-text">Why Choose Mixinmist</h2>
+        <h2 className="mb-4 text-center text-4xl font-bold text-text">Why Choose Mixinmist</h2>
+        <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
+          We've revolutionized the beauty industry by making it easier than ever to launch your own brand. 
+          Our platform combines quality, flexibility, and simplicity.
+        </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <FeatureCard
             icon={Heart}
             title="Personalized Products"
-            description="Customize and brand your product line exactly how you want it"
+            description="Create unique formulations and customize packaging to match your brand vision perfectly"
           />
           <FeatureCard
             icon={Package}
             title="Zero Minimums"
-            description="Start small and scale at your own pace with no minimum orders"
+            description="Start with as little as one unit and scale at your own pace with no minimum orders"
           />
           <FeatureCard
             icon={Star}
             title="Premium Quality"
-            description="Vegan & cruelty-free products made in North America"
+            description="All products are vegan, cruelty-free, and made in North America with sustainable practices"
           />
           <FeatureCard
             icon={Crown}
             title="Launch Faster"
-            description="Get your brand to market in days, not months"
+            description="Get your brand to market in days, not months, with our streamlined platform"
           />
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="container mx-auto px-4 py-20 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-3xl">
+        <h2 className="mb-4 text-center text-4xl font-bold text-text">The Mixinmist Advantage</h2>
+        <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
+          Experience the perfect blend of quality, sustainability, and innovation
+        </p>
+        <div className="grid gap-8 md:grid-cols-3">
+          <div className="flex flex-col items-center text-center p-6 glass-card rounded-2xl hover-lift">
+            <Flower2 className="mb-4 h-12 w-12 text-primary" />
+            <h3 className="mb-2 text-xl font-semibold">Premium Formulations</h3>
+            <p className="text-text-muted">Access to 400+ beauty and wellness products, with new launches every month</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 glass-card rounded-2xl hover-lift">
+            <LeafyGreen className="mb-4 h-12 w-12 text-primary" />
+            <h3 className="mb-2 text-xl font-semibold">Sustainable Choice</h3>
+            <p className="text-text-muted">Eco-friendly packaging and responsible manufacturing practices</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 glass-card rounded-2xl hover-lift">
+            <SprayCan className="mb-4 h-12 w-12 text-primary" />
+            <h3 className="mb-2 text-xl font-semibold">Full Control</h3>
+            <p className="text-text-muted">Complete customization of your product line with expert support</p>
+          </div>
         </div>
       </section>
 
       {/* Steps Section */}
       <section className="container mx-auto px-4 py-20">
-        <h2 className="mb-12 text-center text-4xl font-bold text-text">How It Works</h2>
+        <h2 className="mb-4 text-center text-4xl font-bold text-text">How It Works</h2>
+        <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
+          Launch your beauty brand in three simple steps
+        </p>
         <div className="grid gap-8 md:grid-cols-3">
           {[
             {
               number: "01",
               title: "Curate Products",
-              description: "Choose from hundreds of premium beauty & wellness products",
+              description: "Browse our extensive catalog of premium beauty & wellness products and select your perfect line",
             },
             {
               number: "02",
               title: "Brand It",
-              description: "Add your unique branding and customization",
+              description: "Add your unique branding, customize packaging, and make it truly yours",
             },
             {
               number: "03",
               title: "Launch & Sell",
-              description: "Integrate with your store and start selling immediately",
+              description: "Connect with your preferred e-commerce platform and start selling immediately",
             },
           ].map((step) => (
-            <div key={step.number} className="relative p-6 text-center">
-              <span className="mb-4 block text-4xl font-bold text-primary/20">{step.number}</span>
+            <div key={step.number} className="group relative p-6 text-center hover-lift glass-card rounded-2xl">
+              <span className="mb-4 block text-6xl font-bold text-primary/20 group-hover:text-primary/30 transition-colors">
+                {step.number}
+              </span>
               <h3 className="mb-2 text-xl font-semibold text-text">{step.title}</h3>
               <p className="text-text-muted">{step.description}</p>
             </div>
@@ -87,13 +122,13 @@ const Index = () => {
               © 2024 Mixinmist. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-sm text-text-muted hover:text-primary">
+              <a href="#" className="text-sm text-text-muted hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-text-muted hover:text-primary">
+              <a href="#" className="text-sm text-text-muted hover:text-primary transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-sm text-text-muted hover:text-primary">
+              <a href="#" className="text-sm text-text-muted hover:text-primary transition-colors">
                 Contact
               </a>
             </div>

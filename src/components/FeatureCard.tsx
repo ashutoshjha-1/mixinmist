@@ -9,7 +9,7 @@ interface FeatureCardProps {
 
 export const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => {
   return (
-    <div className="group flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-lg transition-all hover:shadow-xl">
+    <div className="group flex flex-col items-center rounded-2xl glass-card p-6 text-center hover-lift">
       <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary transition-all group-hover:bg-primary/20">
         <Icon size={24} />
       </div>
