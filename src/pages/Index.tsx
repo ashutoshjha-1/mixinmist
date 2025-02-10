@@ -1,4 +1,3 @@
-
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
@@ -16,13 +15,13 @@ const Index = () => {
       {/* Hero section with gradient and wave background */}
       <div className="relative">
         {/* Wave background */}
-        <div className="absolute inset-0 wave-bg opacity-20" />
+        <div className="absolute inset-0 wave-bg opacity-40" />
         
         {/* Gradient background layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-500/30 via-yellow-500/30 to-blue-500/30" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 via-pink-500/20 to-blue-400/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
-        <div className="absolute inset-0 backdrop-blur-[100px] bg-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 via-yellow-500/20 to-blue-500/20" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/10 via-pink-500/10 to-blue-400/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 via-purple-500/5 to-pink-500/5 blur-3xl" />
+        <div className="absolute inset-0 backdrop-blur-[100px] bg-white/30" />
         
         {/* Hero content */}
         <div className="relative">
@@ -44,4 +43,3 @@ const Index = () => {
 };
 
 export default Index;
-
