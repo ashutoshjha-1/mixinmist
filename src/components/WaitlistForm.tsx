@@ -48,7 +48,7 @@ export const WaitlistForm = () => {
       <Button
         type="submit"
         disabled={loading}
-        className="h-12 whitespace-nowrap rounded-xl bg-[#1A1F2C] px-6 text-white transition-all hover:bg-[#1A1F2C]/90"
+        className="h-12 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90"
       >
         {loading ? "Joining..." : "Join Waitlist"}
       </Button>
