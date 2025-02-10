@@ -9,16 +9,23 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white via-accent/20 to-primary/5">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8B5CF6,#D6BCFA)] opacity-10 blur-3xl -z-10" />
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-[100px] -z-10" />
-      <HeroSection />
-      <FeaturesSection />
-      <PlatformSection />
-      <BenefitsSection />
-      <PricingSection />
-      <StepsSection />
-      <Footer />
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Gradient background layers */}
+      <div className="fixed inset-0 bg-gradient-to-br from-red-500/30 via-yellow-500/30 to-blue-500/30 -z-30" />
+      <div className="fixed inset-0 bg-gradient-to-tr from-purple-600/20 via-pink-500/20 to-blue-400/20 -z-20" />
+      <div className="fixed inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl -z-10" />
+      <div className="fixed inset-0 backdrop-blur-[100px] bg-white/50 -z-10" />
+      
+      {/* Content */}
+      <div className="relative z-10">
+        <HeroSection />
+        <FeaturesSection />
+        <PlatformSection />
+        <BenefitsSection />
+        <PricingSection />
+        <StepsSection />
+        <Footer />
+      </div>
     </div>
   );
 };
