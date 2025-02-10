@@ -26,12 +26,12 @@ export const WaitlistForm = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="h-12 rounded-xl border-2 border-gray-300 text-lg placeholder:text-text placeholder:font-semibold focus:border-primary focus:ring-2 focus:ring-primary/20 bg-gradient-to-r from-white via-purple-50 to-white"
+        className="h-12 rounded-xl border-gray-200"
       />
       <Button
         type="submit"
         disabled={loading}
-        className="h-12 rounded-xl bg-primary px-8 text-white font-black text-lg transition-all hover:bg-primary-hover hover:scale-105 hover:shadow-xl shadow-lg shadow-primary/30 tracking-wide"
+        className="h-12 rounded-xl bg-primary px-6 text-white transition-all hover:bg-primary-hover"
       >
         {loading ? "Joining..." : "Join Waitlist"}
       </Button>

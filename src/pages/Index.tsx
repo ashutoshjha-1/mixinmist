@@ -11,10 +11,10 @@ const Index = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Gradient background layers */}
-      <div className="fixed inset-0 bg-gradient-to-br from-violet-600/80 via-fuchsia-500/80 to-orange-400/80 -z-30" />
-      <div className="fixed inset-0 bg-gradient-to-tr from-blue-500/50 via-purple-500/50 to-pink-500/50 -z-20" />
-      <div className="fixed inset-0 bg-gradient-to-r from-indigo-500/30 via-purple-500/30 to-pink-500/30 blur-3xl -z-10" />
-      <div className="fixed inset-0 backdrop-blur-[100px] bg-white/30 -z-10" />
+      <div className="fixed inset-0 bg-gradient-to-br from-red-500/30 via-yellow-500/30 to-blue-500/30 -z-30" />
+      <div className="fixed inset-0 bg-gradient-to-tr from-purple-600/20 via-pink-500/20 to-blue-400/20 -z-20" />
+      <div className="fixed inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl -z-10" />
+      <div className="fixed inset-0 backdrop-blur-[100px] bg-white/50 -z-10" />
       
       {/* Content */}
       <div className="relative z-10">
