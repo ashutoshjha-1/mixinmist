@@ -1,5 +1,14 @@
 
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
+import { WaitlistForm } from "./WaitlistForm";
 
 export const Header = () => {
   return (
@@ -9,6 +18,23 @@ export const Header = () => {
           <span className="text-xl font-black tracking-tight text-black">
             MIXINMIST
           </span>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="h-10 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90">
+                Join Waitlist
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-center text-xl font-bold">
+                  Join Our Waitlist
+                </DialogTitle>
+              </DialogHeader>
+              <div className="px-4 py-6">
+                <WaitlistForm />
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </header>
