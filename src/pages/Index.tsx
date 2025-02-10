@@ -9,7 +9,9 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-accent/20">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white via-accent/20 to-primary/5">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8B5CF6,#D6BCFA)] opacity-10 blur-3xl -z-10" />
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-[100px] -z-10" />
       <HeroSection />
       <FeaturesSection />
       <PlatformSection />
