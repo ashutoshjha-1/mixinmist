@@ -13,11 +13,22 @@ export const WaitlistForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    toast.success("Thank you for joining our waitlist!");
-    setEmail("");
-    setLoading(false);
+    
+    try {
+      const webhookUrl = `https://engine.ayurvedology.com/webhook-test/73d73d09-b55d-4c04-8df4-f8ad4e00f219?email=${encodeURIComponent(email)}`;
+      const response = await fetch(webhookUrl);
+      
+      if (response.ok) {
+        toast.success("Thank you for joining our waitlist!");
+        setEmail("");
+      } else {
+        toast.error("Failed to join waitlist. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Failed to join waitlist. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const formClasses = isMobile
