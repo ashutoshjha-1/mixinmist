@@ -4,7 +4,7 @@ export const StepsSection = () => {
     <section className="container mx-auto px-4 py-20">
       <h2 className="mb-4 text-center text-4xl font-bold text-text">How It Works</h2>
       <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
-        Launch your beauty brand in three simple steps
+        Launch your beauty brand with a professional website in three simple steps
       </p>
       <div className="grid gap-8 md:grid-cols-3">
         {[
@@ -15,13 +15,13 @@ export const StepsSection = () => {
           },
           {
             number: "02",
-            title: "Brand It",
-            description: "Add your unique branding, customize packaging, and make it truly yours",
+            title: "Get Your Custom Website",
+            description: "Receive your personalized domain and professionally designed e-commerce website ready to sell",
           },
           {
             number: "03",
-            title: "Launch & Sell",
-            description: "Connect with your preferred e-commerce platform and start selling immediately",
+            title: "Launch & Scale",
+            description: "Start selling immediately with our fully equipped dashboard and built-in marketing tools",
           },
         ].map((step) => (
           <div key={step.number} className="group relative p-6 text-center hover-lift glass-card rounded-2xl">
