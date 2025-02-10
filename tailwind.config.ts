@@ -26,20 +26,20 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#9b87f5",
-          hover: "#8a74f3",
+          DEFAULT: "#8B5CF6",
+          hover: "#7C3AED",
         },
         secondary: {
-          DEFAULT: "#FFDEE2",
-          hover: "#ffd0d6",
+          DEFAULT: "#FEC6A1",
+          hover: "#FDB485",
         },
         accent: {
-          DEFAULT: "#F2FCE2",
-          hover: "#e9f9d1",
+          DEFAULT: "#D3E4FD",
+          hover: "#B8D5FC",
         },
         text: {
           DEFAULT: "#1A1F2C",
-          muted: "#4A5568",
+          muted: "#6B7280",
         },
       },
       keyframes: {

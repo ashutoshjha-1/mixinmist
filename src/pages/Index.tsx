@@ -5,7 +5,7 @@ import { FeatureCard } from "@/components/FeatureCard";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-secondary/10">
+    <div className="min-h-screen bg-gradient-to-b from-white to-accent/20">
       {/* Hero Section */}
       <section className="container mx-auto flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center">
         <span className="animate-fade-in rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
