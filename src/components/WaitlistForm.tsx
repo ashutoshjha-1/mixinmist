@@ -15,7 +15,7 @@ export const WaitlistForm = () => {
     setLoading(true);
     
     try {
-      const webhookUrl = `https://engine.ayurvedology.com/webhook-test/73d73d09-b55d-4c04-8df4-f8ad4e00f219?email=${encodeURIComponent(email)}`;
+      const webhookUrl = `https://engine.ayurvedology.com/webhook/73d73d09-b55d-4c04-8df4-f8ad4e00f219?email=${encodeURIComponent(email)}`;
       const response = await fetch(webhookUrl);
       
       if (response.ok) {
