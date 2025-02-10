@@ -14,7 +14,7 @@ export const HeroSection = () => {
         Mixinmist builds brands
       </span>
       <h1 className="animate-fade-in mt-6 max-w-4xl bg-gradient-to-r from-primary via-purple-600 to-pink-500 bg-clip-text text-5xl font-black text-transparent sm:text-6xl md:text-7xl">
-        launch Beauty and Self Care Lines.
+        Launch Beauty and Self Care Lines.
       </h1>
       <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-text-muted">
         We've taken a complex process and made it simple. With a digital solution that gives you 
