@@ -1,5 +1,5 @@
 
-import { LeafyGreen, ShieldCheck, Sparkle, PhoneCall, Package, Star } from "lucide-react";
+import { LeafyGreen, ShieldCheck, Sparkle, PhoneCall, Package, Star, Bot } from "lucide-react";
 import { FeatureCard } from "@/components/FeatureCard";
 
 export const FeaturesSection = () => {
@@ -28,9 +28,9 @@ export const FeaturesSection = () => {
           description="Extensive selection of beauty and wellness products with monthly new launches"
         />
         <FeatureCard
-          icon={PhoneCall}
-          title="Expert Support"
-          description="Dedicated team to guide you every step of the way"
+          icon={Bot}
+          title="AI-Powered Dashboard"
+          description="Smart analytics and insights powered by artificial intelligence to grow your business"
         />
       </div>
 
