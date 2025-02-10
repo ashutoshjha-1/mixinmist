@@ -13,8 +13,11 @@ const Index = () => {
     <div className="relative min-h-screen">
       <Header />
       
-      {/* Hero section with gradient background */}
+      {/* Hero section with gradient and wave background */}
       <div className="relative">
+        {/* Wave background */}
+        <div className="absolute inset-0 wave-bg opacity-20" />
+        
         {/* Gradient background layers */}
         <div className="absolute inset-0 bg-gradient-to-br from-red-500/30 via-yellow-500/30 to-blue-500/30" />
         <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 via-pink-500/20 to-blue-400/20" />
@@ -41,3 +44,4 @@ const Index = () => {
 };
 
 export default Index;
+

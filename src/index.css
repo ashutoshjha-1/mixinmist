@@ -24,3 +24,25 @@
 .hover-lift {
   @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5;
 }
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(2%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.wave-bg {
+  background: linear-gradient(45deg, #33C3F0, #1EAEDB);
+  mask-image: url('/lovable-uploads/53a33adf-b398-4270-b202-50898123bef0.png');
+  mask-size: 200% 100%;
+  -webkit-mask-image: url('/lovable-uploads/53a33adf-b398-4270-b202-50898123bef0.png');
+  -webkit-mask-size: 200% 100%;
+  animation: wave 15s infinite linear;
+}
+
