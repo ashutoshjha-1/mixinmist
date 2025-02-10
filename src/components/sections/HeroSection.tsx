@@ -20,7 +20,7 @@ export const HeroSection = () => {
         Transform your vision into reality with Mixinmist. We handle all costs and shipping while you focus on growing your brand. 
         Get a custom domain website and fully equipped dashboard to manage everything with zero upfront investment.
       </p>
-      <div className={`animate-fade-in-up ${isMobile ? 'mt-8 mb-20' : 'mt-8'}`}>
+      <div className={`animate-fade-in-up ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
         <WaitlistForm />
       </div>
     </section>
