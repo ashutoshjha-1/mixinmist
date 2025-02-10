@@ -16,7 +16,7 @@ export const HeroSection = () => {
       <h1 className="animate-fade-in mt-6 max-w-4xl bg-gradient-to-r from-primary via-purple-600 to-pink-500 bg-clip-text text-5xl font-black text-transparent sm:text-6xl md:text-7xl">
         Build & Scale Your Beauty Brand
       </h1>
-      <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-text-muted">
+      <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-black">
         Transform your vision into reality with Mixinmist. We handle all costs and shipping while you focus on growing your brand. 
         Get a custom domain website and fully equipped dashboard to manage everything with zero upfront investment.
       </p>
