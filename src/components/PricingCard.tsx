@@ -32,10 +32,10 @@ export const PricingCard = ({ title, features, highlight, popular }: PricingCard
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-2 px-4 rounded-full transition-all duration-300 ${
+      <button className={`w-full mt-6 py-3 px-6 rounded-full font-bold text-base transition-all duration-300 hover:scale-105 hover:shadow-lg ${
         highlight 
-          ? 'bg-primary text-white hover:bg-primary-hover' 
-          : 'border-2 border-primary/20 hover:border-primary/40 text-text-muted hover:text-text'
+          ? 'bg-primary text-white hover:bg-primary-hover shadow-md shadow-primary/20' 
+          : 'border-2 border-primary/20 hover:border-primary/40 text-text-muted hover:text-text hover:bg-primary/5'
       }`}>
         Get Started
       </button>
