@@ -1,7 +1,10 @@
 
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const HeroSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center">
       {/* Decorative gradient orb */}
@@ -17,7 +20,7 @@ export const HeroSection = () => {
         Transform your vision into reality with Mixinmist. We handle all costs and shipping while you focus on growing your brand. 
         Get a custom domain website and fully equipped dashboard to manage everything with zero upfront investment.
       </p>
-      <div className="animate-fade-in-up mt-8">
+      <div className={`animate-fade-in-up ${isMobile ? 'mt-8 mb-20' : 'mt-8'}`}>
         <WaitlistForm />
       </div>
     </section>
