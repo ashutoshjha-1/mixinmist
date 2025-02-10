@@ -26,7 +26,7 @@ export const WaitlistForm = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="h-12 rounded-xl border-gray-300 text-lg placeholder:text-gray-500 placeholder:font-medium"
+        className="h-12 rounded-xl border-gray-300 text-lg placeholder:text-text placeholder:font-semibold"
       />
       <Button
         type="submit"
