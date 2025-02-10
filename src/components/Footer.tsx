@@ -7,17 +7,6 @@ export const Footer = () => {
           <p className="text-sm font-bold text-text-muted">
             © 2025 Mixinmist. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-sm font-bold text-text-muted hover:text-primary transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-sm font-bold text-text-muted hover:text-primary transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-sm font-bold text-text-muted hover:text-primary transition-colors">
-              Contact
-            </a>
-          </div>
         </div>
       </div>
     </footer>
