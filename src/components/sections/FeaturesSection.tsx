@@ -24,7 +24,7 @@ export const FeaturesSection = () => {
         />
         <FeatureCard
           icon={Star}
-          title="400+ Products"
+          title="20+ Products"
           description="Extensive selection of beauty and wellness products with monthly new launches"
         />
         <FeatureCard
