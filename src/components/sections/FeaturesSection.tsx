@@ -20,7 +20,7 @@ export const FeaturesSection = () => {
         <FeatureCard
           icon={ShieldCheck}
           title="Certified Quality"
-          description="North American made products meeting the highest industry standards"
+          description="Indian manufactured products meeting the highest industry standards"
         />
         <FeatureCard
           icon={Star}
