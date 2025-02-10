@@ -1,4 +1,3 @@
-
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
@@ -28,9 +27,6 @@ const Index = () => {
         <div className="relative">
           <HeroSection />
         </div>
-
-        {/* Wave border at bottom of hero */}
-        <div className="hero-wave-border" />
       </div>
 
       {/* Rest of the content without gradient */}
