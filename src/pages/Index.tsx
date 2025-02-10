@@ -1,5 +1,4 @@
-
-import { Heart, Package, Star, Crown, Flower2, LeafyGreen, SprayCan } from "lucide-react";
+import { Heart, Package, Star, Crown, Flower2, LeafyGreen, SprayCan, Globe, Gauge, Palette, Layers, Layout, Settings } from "lucide-react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { FeatureCard } from "@/components/FeatureCard";
 
@@ -16,7 +15,7 @@ const Index = () => {
         </h1>
         <p className="animate-fade-in mt-6 max-w-2xl text-lg text-text-muted">
           Transform your vision into reality with Mixinmist. Create your own premium beauty brand with zero minimums, 
-          zero commitment, and zero risk. Our curated collection of vegan, cruelty-free products awaits your personal touch.
+          zero commitment, and zero risk. Get a custom domain website and fully equipped dashboard to manage everything.
         </p>
         <div className="animate-fade-in-up mt-8">
           <WaitlistForm />
@@ -51,6 +50,57 @@ const Index = () => {
             title="Launch Faster"
             description="Get your brand to market in days, not months, with our streamlined platform"
           />
+        </div>
+      </section>
+
+      {/* Platform Features Section */}
+      <section className="container mx-auto px-4 py-20">
+        <h2 className="mb-4 text-center text-4xl font-bold text-text">Complete Digital Solution</h2>
+        <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
+          Everything you need to run your beauty brand online, from website to operations
+        </p>
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="glass-card rounded-3xl p-8 hover-lift">
+            <div className="mb-6 flex items-center justify-center">
+              <Globe className="h-12 w-12 text-primary" />
+            </div>
+            <h3 className="mb-4 text-2xl font-bold text-text">Custom Domain Website</h3>
+            <ul className="space-y-4 text-text-muted">
+              <li className="flex items-center gap-2">
+                <Palette className="h-5 w-5 text-primary" />
+                <span>Professionally designed templates</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Layout className="h-5 w-5 text-primary" />
+                <span>Fully customizable layouts</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Layers className="h-5 w-5 text-primary" />
+                <span>Mobile-responsive design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="glass-card rounded-3xl p-8 hover-lift">
+            <div className="mb-6 flex items-center justify-center">
+              <Gauge className="h-12 w-12 text-primary" />
+            </div>
+            <h3 className="mb-4 text-2xl font-bold text-text">Complete Dashboard</h3>
+            <ul className="space-y-4 text-text-muted">
+              <li className="flex items-center gap-2">
+                <Settings className="h-5 w-5 text-primary" />
+                <span>Order management system</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Star className="h-5 w-5 text-primary" />
+                <span>Analytics and reporting</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Package className="h-5 w-5 text-primary" />
+                <span>Inventory tracking</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
