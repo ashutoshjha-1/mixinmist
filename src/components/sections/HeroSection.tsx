@@ -17,8 +17,7 @@ export const HeroSection = () => {
         Launch Beauty and Self Care Lines.
       </h1>
       <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-text-muted">
-        We've taken a complex process and made it simple. With a digital solution that gives you 
-        the power to personalize, customize, launch, and scale a branded product line on your terms.
+        A digital solution to personalize, customize, and launch your branded product line.
       </p>
       <div className={`animate-fade-in-up ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
         <WaitlistForm />
