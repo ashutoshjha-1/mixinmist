@@ -45,3 +45,15 @@
   -webkit-mask-size: 200% 100%;
   animation: wave 15s infinite linear;
 }
+
+.waitlist-form {
+  @apply fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-lg border-t border-gray-200 shadow-lg z-50;
+}
+
+.waitlist-input {
+  @apply h-12 rounded-xl border-gray-200 bg-white/80 backdrop-blur-sm transition-all duration-300 focus:ring-2 focus:ring-primary/20;
+}
+
+.waitlist-button {
+  @apply h-12 w-full whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90 hover:shadow-lg hover:shadow-primary/10;
+}
