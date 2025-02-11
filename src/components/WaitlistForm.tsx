@@ -54,7 +54,7 @@ export const WaitlistForm = () => {
           {loading ? "Joining..." : "Join Waitlist"}
         </Button>
       </form>
-      <p className="text-sm text-gray-500 text-center">
+      <p className="text-xs text-gray-500 text-center">
         We respect your privacy. No spam, just product updates.
       </p>
     </div>
