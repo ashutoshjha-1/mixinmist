@@ -15,10 +15,10 @@ export const HeroSection = () => {
       
       {/* Hero content */}
       <div className="relative flex flex-col items-center">
-        <span className="animate-fade-in flex items-center gap-2 rounded-full bg-black/5 px-6 py-2 text-sm font-extrabold text-black backdrop-blur-sm shadow-lg">
-          <Sparkle className="h-4 w-4" />
+        <span className="animate-fade-in flex items-center gap-2 rounded-full bg-gradient-to-r from-[#9b87f5]/20 via-[#D6BCFA]/20 to-[#E5DEFF]/20 px-8 py-3 text-sm font-extrabold text-[#1A1F2C] backdrop-blur-sm shadow-[0_4px_20px_rgba(155,135,245,0.15)] hover:shadow-[0_4px_25px_rgba(155,135,245,0.25)] transition-all duration-300 border border-[#9b87f5]/10">
+          <Sparkle className="h-4 w-4 text-[#8B5CF6]" />
           Mixinmist builds brands
-          <Flower2 className="h-4 w-4" />
+          <Flower2 className="h-4 w-4 text-[#8B5CF6]" />
         </span>
         
         <h1 className="animate-fade-in mt-6 max-w-4xl text-5xl font-black text-black sm:text-6xl md:text-7xl">
@@ -41,3 +41,4 @@ export const HeroSection = () => {
     </section>
   );
 };
+
