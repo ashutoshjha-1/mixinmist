@@ -17,7 +17,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-xl font-black tracking-tight text-black hover:opacity-80 transition-opacity">
-            MIXINMIST<sup className="text-xs tracking-normal">TM</sup>
+            MIXINMIST<sup className="text-[10px] tracking-normal">TM</sup>
           </Link>
           <Dialog>
             <DialogTrigger asChild>
