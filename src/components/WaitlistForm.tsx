@@ -36,22 +36,27 @@ export const WaitlistForm = () => {
     : "w-full max-w-md";
 
   return (
-    <form onSubmit={handleSubmit} className={`flex gap-2 ${formClasses}`}>
-      <Input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        className="h-12 rounded-xl border-gray-200"
-      />
-      <Button
-        type="submit"
-        disabled={loading}
-        className="h-12 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90"
-      >
-        {loading ? "Joining..." : "Join Waitlist"}
-      </Button>
-    </form>
+    <div className="space-y-2">
+      <form onSubmit={handleSubmit} className={`flex gap-2 ${formClasses}`}>
+        <Input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="h-12 rounded-xl border-gray-200"
+        />
+        <Button
+          type="submit"
+          disabled={loading}
+          className="h-12 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90"
+        >
+          {loading ? "Joining..." : "Join Waitlist"}
+        </Button>
+      </form>
+      <p className="text-sm text-gray-500 text-center">
+        We respect your privacy. No spam, just product updates.
+      </p>
+    </div>
   );
 };
