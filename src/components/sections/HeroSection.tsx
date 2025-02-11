@@ -8,8 +8,15 @@ export const HeroSection = () => {
   
   return (
     <section className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-[length:200%_200%] animate-gradient -z-10" />
+      {/* Striped background */}
+      <div 
+        className="absolute inset-0 -z-10" 
+        style={{
+          backgroundColor: "#ffffff",
+          opacity: 0.8,
+          background: "repeating-linear-gradient(-45deg, #000000, #000000 19.5px, #ffffff 19.5px, #ffffff 97.5px)"
+        }}
+      />
       
       {/* Hero content */}
       <div className="relative flex flex-col items-center">
