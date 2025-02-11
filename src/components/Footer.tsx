@@ -7,6 +7,9 @@ export const Footer = () => {
           <p className="text-sm font-bold text-text-muted">
             © 2025 Mixinmist. All rights reserved.
           </p>
+          <p className="text-sm text-text-muted">
+            Made with ❤️ in India
+          </p>
         </div>
       </div>
     </footer>
