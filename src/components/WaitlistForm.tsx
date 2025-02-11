@@ -32,31 +32,33 @@ export const WaitlistForm = () => {
   };
 
   const formClasses = isMobile
-    ? "fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-lg border-t border-gray-200 shadow-lg z-50"
+    ? "fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-lg border-t border-gray-200 shadow-lg z-50 space-y-2"
     : "w-full max-w-md";
 
   return (
     <div className="space-y-2">
-      <form onSubmit={handleSubmit} className={`flex gap-2 ${formClasses}`}>
-        <Input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="h-12 rounded-xl border-gray-200"
-        />
-        <Button
-          type="submit"
-          disabled={loading}
-          className="h-12 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90"
-        >
-          {loading ? "Joining..." : "Join Waitlist"}
-        </Button>
+      <form onSubmit={handleSubmit} className={formClasses}>
+        <div className="space-y-2">
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="h-12 rounded-xl border-gray-200"
+          />
+          <p className="text-xs text-gray-500 text-center">
+            We respect your privacy. No spam, just product updates.
+          </p>
+          <Button
+            type="submit"
+            disabled={loading}
+            className="w-full h-12 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90"
+          >
+            {loading ? "Joining..." : "Join Waitlist"}
+          </Button>
+        </div>
       </form>
-      <p className="text-xs text-gray-500 text-center">
-        We respect your privacy. No spam, just product updates.
-      </p>
     </div>
   );
 };
