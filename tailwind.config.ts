@@ -56,22 +56,48 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
         gradient: {
-          "0%": { transform: "rotate(0deg)" },
-          "50%": { transform: "rotate(180deg)" },
-          "100%": { transform: "rotate(360deg)" }
+          "0%": { 
+            "background-position": "0% 50%",
+            transform: "rotate(0deg)"
+          },
+          "33%": {
+            "background-position": "100% 50%",
+            transform: "rotate(120deg)"
+          },
+          "66%": {
+            "background-position": "0% 50%",
+            transform: "rotate(240deg)"
+          },
+          "100%": {
+            "background-position": "100% 50%",
+            transform: "rotate(360deg)"
+          }
         },
         "gradient-secondary": {
-          "0%": { transform: "rotate(180deg)" },
-          "50%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(-180deg)" }
+          "0%": { 
+            "background-position": "100% 50%",
+            transform: "rotate(360deg)"
+          },
+          "33%": {
+            "background-position": "0% 50%",
+            transform: "rotate(240deg)"
+          },
+          "66%": {
+            "background-position": "100% 50%",
+            transform: "rotate(120deg)"
+          },
+          "100%": {
+            "background-position": "0% 50%",
+            transform: "rotate(0deg)"
+          }
         }
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
         "fade-in-up": "fade-in-up 0.7s ease-out",
         float: "float 6s ease-in-out infinite",
-        gradient: "gradient 15s linear infinite",
-        "gradient-secondary": "gradient-secondary 15s linear infinite",
+        gradient: "gradient 20s ease infinite",
+        "gradient-secondary": "gradient-secondary 20s ease infinite",
       },
     },
   },

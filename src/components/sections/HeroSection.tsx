@@ -10,14 +10,14 @@ export const HeroSection = () => {
     <section className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center">
       {/* Animated gradient background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-[#9b87f5]/40 via-[#D6BCFA]/30 to-[#E5DEFF]/40" />
-        <div className="absolute inset-0 animate-gradient-secondary bg-gradient-to-tr from-[#8B5CF6]/30 via-[#D946EF]/20 to-[#0EA5E9]/30" />
+        <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-purple-600/80 via-pink-500/70 to-blue-500/80" />
+        <div className="absolute inset-0 animate-gradient-secondary bg-gradient-to-tr from-indigo-600/70 via-fuchsia-500/60 to-cyan-400/70" />
       </div>
       
       {/* Decorative gradient orbs */}
-      <div className="absolute left-1/2 top-1/2 aspect-square w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#9b87f5]/20 via-[#7E69AB]/20 to-[#6E59A5]/20 blur-[120px] -z-10" />
-      <div className="absolute right-1/4 top-1/4 aspect-square w-1/3 rounded-full bg-gradient-to-r from-[#8B5CF6]/20 to-[#E5DEFF]/20 blur-[90px] -z-10 animate-float" />
-      <div className="absolute left-1/4 bottom-1/4 aspect-square w-1/3 rounded-full bg-gradient-to-r from-[#7E69AB]/20 to-[#9b87f5]/20 blur-[90px] -z-10 animate-float" />
+      <div className="absolute left-1/2 top-1/2 aspect-square w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-purple-500/30 via-fuchsia-400/30 to-indigo-400/30 blur-[120px] -z-10" />
+      <div className="absolute right-1/4 top-1/4 aspect-square w-1/3 rounded-full bg-gradient-to-r from-blue-500/30 to-purple-400/30 blur-[90px] -z-10 animate-float" />
+      <div className="absolute left-1/4 bottom-1/4 aspect-square w-1/3 rounded-full bg-gradient-to-r from-indigo-500/30 to-cyan-400/30 blur-[90px] -z-10 animate-float" />
       
       {/* Hero content */}
       <div className="relative flex flex-col items-center">
