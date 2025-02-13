@@ -22,36 +22,20 @@ export const HeroSection = () => {
       <div className="relative flex flex-col items-center">
         <span className="animate-fade-in flex items-center gap-2 rounded-full bg-gradient-to-r from-[#9b87f5]/20 via-[#D6BCFA]/20 to-[#E5DEFF]/20 px-8 py-3 text-sm font-extrabold text-[#1A1F2C] backdrop-blur-sm shadow-[0_4px_20px_rgba(155,135,245,0.15)] hover:shadow-[0_4px_25px_rgba(155,135,245,0.25)] transition-all duration-300 border border-[#9b87f5]/10">
           <Sparkle className="h-4 w-4 text-[#8B5CF6]" />
-          Beauty Brands Made Simple
+          Create Your Dream Beauty Brand
           <Flower2 className="h-4 w-4 text-[#8B5CF6]" />
         </span>
         
         <h1 className="animate-fade-in mt-6 max-w-4xl text-5xl font-black text-black sm:text-6xl md:text-7xl">
-          Launch Your Beauty Brand Without The Headache
+          Where Beauty Meets Innovation
         </h1>
         
         <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-text-muted">
-          Create, customize, and launch your beauty brand with our AI-powered platform.
+          Launch your beauty brand in minutes, not months.
         </p>
         
         <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
           <WaitlistForm />
-        </div>
-
-        {/* Product Hunt Badge */}
-        <div className="mt-8">
-          <a 
-            href="https://www.producthunt.com/products/mixinmist?utm_source=badge-follow&utm_medium=badge&utm_souce=badge-mixinmist" 
-            target="_blank"
-          >
-            <img 
-              src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=982507&theme=dark" 
-              alt="Mixinmist - Launch&#0032;your&#0032;beauty&#0032;brand&#0032;in&#0032;5&#0032;minutes&#0046; | Product Hunt" 
-              style={{ width: '250px', height: '54px' }} 
-              width="250" 
-              height="54" 
-            />
-          </a>
         </div>
       </div>
 
