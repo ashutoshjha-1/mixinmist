@@ -1,4 +1,3 @@
-
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
@@ -49,8 +48,7 @@ const Index = () => {
               <h3 className="mb-4 text-2xl font-bold text-text">Transform Your Beauty Brand Vision into Reality</h3>
               <p className="max-w-2xl text-text-muted">
                 Join hundreds of successful beauty entrepreneurs who've launched their dream products with us. 
-                Get access to premium formulations, sustainable packaging, and industry-leading support. 
-                Start with just 50 units per SKU and scale at your own pace.
+                Get access to premium formulations, sustainable packaging, and industry-leading support.
               </p>
             </div>
           </div>
