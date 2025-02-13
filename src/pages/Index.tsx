@@ -1,3 +1,4 @@
+
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
@@ -31,11 +32,11 @@ const Index = () => {
 
       {/* Rest of the content without gradient */}
       <div className="bg-white">
+        <StepsSection />
         <FeaturesSection />
         <PlatformSection />
         <BenefitsSection />
         <PricingSection />
-        <StepsSection />
         <Footer />
       </div>
     </div>
