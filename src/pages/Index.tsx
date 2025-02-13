@@ -7,6 +7,7 @@ import { PricingSection } from "@/components/sections/PricingSection";
 import { StepsSection } from "@/components/sections/StepsSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Sparkle } from "lucide-react";
 
 const Index = () => {
   return (
@@ -37,6 +38,23 @@ const Index = () => {
         <PlatformSection />
         <BenefitsSection />
         <PricingSection />
+        
+        {/* Call to Action */}
+        <div className="container mx-auto px-4 mb-20">
+          <div className="rounded-2xl bg-gradient-to-r from-secondary/20 to-accent/20 p-8">
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-4 rounded-full bg-primary/10 p-4">
+                <Sparkle className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="mb-4 text-2xl font-bold text-text">Ready to Start Your Beauty Brand?</h3>
+              <p className="max-w-2xl text-text-muted">
+                Browse our product library and create your unique beauty line today. 
+                Zero minimum orders, full customization, and expert support at every step.
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <Footer />
       </div>
     </div>
