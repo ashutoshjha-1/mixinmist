@@ -41,7 +41,6 @@ export const HeroSection = () => {
 
       {/* Decorative circles */}
       <div className="absolute top-12 right-12 w-6 h-6 rounded-full bg-black/10 animate-float" />
-      <div className="absolute bottom-12 left-12 w-4 h-4 rounded-full bg-black/10 animate-float" />
     </section>
   );
 };
