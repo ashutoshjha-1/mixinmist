@@ -3,7 +3,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Sparkle, Flower2 } from "lucide-react";
 export const HeroSection = () => {
   const isMobile = useIsMobile();
-  return <section className="container relative mx-auto flex min-h-[100svh] flex-col items-center justify-center px-4 text-center py-[6px]">
+  return <section className="container relative mx-auto flex min-h-[100svh] flex-col items-center justify-center px-4 text-center py-[2px]">
       {/* Striped background */}
       <div className="absolute inset-0 -z-10" style={{
       backgroundColor: "#ffffff",
