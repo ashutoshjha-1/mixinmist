@@ -37,6 +37,23 @@ export const HeroSection = () => {
         <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
           <WaitlistForm />
         </div>
+
+        {/* Product Hunt Badge */}
+        <div className="mt-8">
+          <a 
+            href="https://www.producthunt.com/products/mixinmist?utm_source=badge-follow&utm_medium=badge&utm_souce=badge-mixinmist" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=982507&theme=dark" 
+              alt="Mixinmist - Launch your beauty brand in 5 minutes" 
+              style={{ width: '250px', height: '54px' }} 
+              width="250" 
+              height="54" 
+            />
+          </a>
+        </div>
       </div>
 
       {/* Decorative circles */}
