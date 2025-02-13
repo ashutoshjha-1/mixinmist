@@ -1,7 +1,7 @@
 
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Sparkle, Flower2, Rocket, Star } from "lucide-react";
+import { Sparkle, Flower2 } from "lucide-react";
 
 export const HeroSection = () => {
   const isMobile = useIsMobile();
@@ -22,7 +22,7 @@ export const HeroSection = () => {
       <div className="relative flex flex-col items-center">
         <span className="animate-fade-in flex items-center gap-2 rounded-full bg-gradient-to-r from-[#9b87f5]/20 via-[#D6BCFA]/20 to-[#E5DEFF]/20 px-8 py-3 text-sm font-extrabold text-[#1A1F2C] backdrop-blur-sm shadow-[0_4px_20px_rgba(155,135,245,0.15)] hover:shadow-[0_4px_25px_rgba(155,135,245,0.25)] transition-all duration-300 border border-[#9b87f5]/10">
           <Sparkle className="h-4 w-4 text-[#8B5CF6]" />
-          The Beauty Industry is Broken. We're Fixing It.
+          Beauty Brands Made Simple
           <Flower2 className="h-4 w-4 text-[#8B5CF6]" />
         </span>
         
@@ -31,26 +31,8 @@ export const HeroSection = () => {
         </h1>
         
         <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-text-muted">
-          No bulk orders. No complex supply chains. Just your vision turned into a thriving beauty brand with our AI-powered platform.
+          Create, customize, and launch your beauty brand with our AI-powered platform.
         </p>
-
-        {/* Key Features Grid */}
-        <div className="animate-fade-in mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
-          <div className="flex items-start gap-2 text-left p-4 rounded-lg bg-white/50 backdrop-blur-sm">
-            <Star className="h-5 w-5 text-[#8B5CF6] mt-1 shrink-0" />
-            <div>
-              <h3 className="font-bold text-black">Personalized Beauty</h3>
-              <p className="text-sm text-text-muted">Customize formulations, packaging, and branding to create truly unique products.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-2 text-left p-4 rounded-lg bg-white/50 backdrop-blur-sm">
-            <Rocket className="h-5 w-5 text-[#8B5CF6] mt-1 shrink-0" />
-            <div>
-              <h3 className="font-bold text-black">Quick Launch</h3>
-              <p className="text-sm text-text-muted">Go from idea to market in days, not months. No minimum order quantities.</p>
-            </div>
-          </div>
-        </div>
         
         <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
           <WaitlistForm />
