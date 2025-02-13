@@ -47,8 +47,8 @@ export const HeroSection = () => {
             <img 
               src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=982507&theme=dark" 
               alt="Mixinmist - Launch&#0032;your&#0032;beauty&#0032;brand&#0032;in&#0032;5&#0032;minutes&#0046; | Product Hunt" 
-              style={{ width: '250px', height: '54px' }} 
-              width="200" 
+              style={{ width: '200px', height: '54px' }} 
+              width="250" 
               height="54" 
             />
           </a>
