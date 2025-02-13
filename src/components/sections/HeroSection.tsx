@@ -43,13 +43,12 @@ export const HeroSection = () => {
           <a 
             href="https://www.producthunt.com/products/mixinmist?utm_source=badge-follow&utm_medium=badge&utm_souce=badge-mixinmist" 
             target="_blank"
-            rel="noopener noreferrer"
           >
             <img 
               src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=982507&theme=dark" 
-              alt="Mixinmist - Launch your beauty brand in 5 minutes" 
+              alt="Mixinmist - Launch&#0032;your&#0032;beauty&#0032;brand&#0032;in&#0032;5&#0032;minutes&#0046; | Product Hunt" 
               style={{ width: '250px', height: '54px' }} 
-              width="250" 
+              width="200" 
               height="54" 
             />
           </a>
