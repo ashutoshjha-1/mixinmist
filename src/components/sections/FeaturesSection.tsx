@@ -1,5 +1,5 @@
 
-import { LeafyGreen, ShieldCheck, Sparkle, Star, Bot, Timer, Settings, Package, Flask, Palette, Droplet } from "lucide-react";
+import { LeafyGreen, ShieldCheck, Sparkle, Star, Bot, Timer, Settings, TestTube, Palette, Droplet } from "lucide-react";
 import { FeatureCard } from "@/components/FeatureCard";
 
 export const FeaturesSection = () => {
@@ -15,7 +15,7 @@ export const FeaturesSection = () => {
       {/* Product Categories Grid */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <FeatureCard
-          icon={Flask}
+          icon={TestTube}
           title="Skincare Essentials"
           description="Serums, moisturizers, cleansers, and masks with premium active ingredients."
         />
