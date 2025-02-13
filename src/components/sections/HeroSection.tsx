@@ -1,9 +1,11 @@
+
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sparkle, Flower2 } from "lucide-react";
+
 export const HeroSection = () => {
   const isMobile = useIsMobile();
-  return <section className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-4 text-center py-[22px]">
+  return <section className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-4 text-center py-[12px]">
       {/* Striped background */}
       <div className="absolute inset-0 -z-10" style={{
       backgroundColor: "#ffffff",
@@ -19,15 +21,15 @@ export const HeroSection = () => {
           <Flower2 className="h-4 w-4 text-[#8B5CF6]" />
         </span>
         
-        <h1 className="animate-fade-in mt-6 max-w-4xl text-5xl font-black text-black sm:text-6xl md:text-7xl">
+        <h1 className="animate-fade-in mt-4 max-w-4xl text-5xl font-black text-black sm:text-6xl md:text-7xl">
           Where Beauty Meets Innovation
         </h1>
         
-        <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-text-muted">
+        <p className="animate-fade-in mt-4 max-w-2xl text-lg font-bold text-text-muted">
           Launch your beauty brand in minutes, not months.
         </p>
         
-        <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
+        <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-6 mb-16' : 'mt-8'}`}>
           <WaitlistForm />
         </div>
       </div>
