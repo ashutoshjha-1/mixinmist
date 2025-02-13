@@ -1,22 +1,15 @@
-
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sparkle, Flower2 } from "lucide-react";
-
 export const HeroSection = () => {
   const isMobile = useIsMobile();
-  
-  return (
-    <section className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-4 py-12 md:py-20 text-center">
+  return <section className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-4 text-center py-[22px]">
       {/* Striped background */}
-      <div 
-        className="absolute inset-0 -z-10" 
-        style={{
-          backgroundColor: "#ffffff",
-          opacity: 0.8,
-          background: "repeating-linear-gradient(-45deg, #000000, #000000 19.5px, #ffffff 19.5px, #ffffff 97.5px)"
-        }}
-      />
+      <div className="absolute inset-0 -z-10" style={{
+      backgroundColor: "#ffffff",
+      opacity: 0.8,
+      background: "repeating-linear-gradient(-45deg, #000000, #000000 19.5px, #ffffff 19.5px, #ffffff 97.5px)"
+    }} />
       
       {/* Hero content */}
       <div className="relative flex flex-col items-center">
@@ -26,21 +19,20 @@ export const HeroSection = () => {
           <Flower2 className="h-4 w-4 text-[#8B5CF6]" />
         </span>
         
-        <h1 className="animate-fade-in mt-4 md:mt-6 max-w-4xl text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-black">
+        <h1 className="animate-fade-in mt-6 max-w-4xl text-5xl font-black text-black sm:text-6xl md:text-7xl">
           Where Beauty Meets Innovation
         </h1>
         
-        <p className="animate-fade-in mt-4 md:mt-6 max-w-2xl text-lg font-bold text-text-muted">
+        <p className="animate-fade-in mt-6 max-w-2xl text-lg font-bold text-text-muted">
           Launch your beauty brand in minutes, not months.
         </p>
         
-        <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-6 mb-24' : 'mt-8'}`}>
+        <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-8 mb-32' : 'mt-8'}`}>
           <WaitlistForm />
         </div>
       </div>
 
       {/* Decorative circles */}
       <div className="absolute top-12 right-12 w-6 h-6 rounded-full bg-black/10 animate-float" />
-    </section>
-  );
+    </section>;
 };
