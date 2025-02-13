@@ -46,10 +46,11 @@ const Index = () => {
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Sparkle className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="mb-4 text-2xl font-bold text-text">Ready to Start Your Beauty Brand?</h3>
+              <h3 className="mb-4 text-2xl font-bold text-text">Transform Your Beauty Brand Vision into Reality</h3>
               <p className="max-w-2xl text-text-muted">
-                Browse our product library and create your unique beauty line today. 
-                Zero minimum orders, full customization, and expert support at every step.
+                Join hundreds of successful beauty entrepreneurs who've launched their dream products with us. 
+                Get access to premium formulations, sustainable packaging, and industry-leading support. 
+                Start with just 50 units per SKU and scale at your own pace.
               </p>
             </div>
           </div>
