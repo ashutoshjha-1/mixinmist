@@ -2,7 +2,7 @@
 export const Footer = () => {
   return (
     <footer className="border-t border-gray-100 bg-white">
-      <div className="container mx-auto px-4 py-8 md:py-8 pb-32 md:pb-8">
+      <div className="container mx-auto px-4 py-8 pb-40 md:py-8 md:pb-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:items-center">
           <p className="text-sm font-bold text-text-muted">
             © 2025 Mixinmist. All rights reserved.
@@ -23,7 +23,7 @@ export const Footer = () => {
             />
           </a>
           
-          <p className="text-sm text-text-muted">
+          <p className="text-sm text-text-muted mb-24 md:mb-0">
             Made with ❤️ in India
           </p>
         </div>
