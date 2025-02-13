@@ -1,12 +1,25 @@
 
+import { Instagram } from "lucide-react";
+
 export const Footer = () => {
   return (
     <footer className="border-t border-gray-100 bg-neutral-50 shadow-inner">
       <div className="container mx-auto px-4 py-8 pb-40 md:py-8 md:pb-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:items-center">
-          <p className="text-sm font-bold text-text-muted">
-            © 2025 Mixinmist. All rights reserved.
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="text-sm font-bold text-text-muted">
+              © 2025 Mixinmist. All rights reserved.
+            </p>
+            <a 
+              href="https://instagram.com/mixinmist" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-text-muted hover:text-primary transition-colors"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
+          </div>
           
           {/* Product Hunt Badge */}
           <a 
