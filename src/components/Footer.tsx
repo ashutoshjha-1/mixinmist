@@ -1,5 +1,6 @@
 
 import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -10,6 +11,12 @@ export const Footer = () => {
             <p className="text-sm font-bold text-text-muted">
               © 2025 Mixinmist. All rights reserved.
             </p>
+            <Link 
+              to="/blogs" 
+              className="text-sm font-medium text-text-muted hover:text-black transition-colors"
+            >
+              Blog
+            </Link>
             <a 
               href="https://instagram.com/mixinmist" 
               target="_blank" 
