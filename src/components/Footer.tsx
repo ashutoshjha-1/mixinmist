@@ -47,6 +47,13 @@ export const Footer = () => {
             Made with ❤️ in India
           </p>
         </div>
+
+        {/* Facebook Disclaimer */}
+        <div className="mt-8 text-center border-t border-gray-200 pt-4">
+          <p className="text-xs text-text-muted max-w-2xl mx-auto">
+            Disclaimer: Mixinmist is not endorsed by, directly affiliated with, maintained, authorized, or sponsored by Meta (formerly Facebook) or any of its subsidiaries or affiliates. All product and company names are the registered trademarks of their original owners.
+          </p>
+        </div>
       </div>
     </footer>
   );
