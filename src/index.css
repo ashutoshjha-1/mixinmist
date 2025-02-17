@@ -18,11 +18,11 @@
 }
 
 .glass-card {
-  @apply backdrop-blur-md bg-white/90 border border-white/20 shadow-lg transition-all duration-300;
+  @apply backdrop-blur-md bg-white/95 border border-white/40 shadow-xl transition-all duration-300;
 }
 
 .hover-lift {
-  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5;
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10;
 }
 
 @keyframes wave {
@@ -38,7 +38,7 @@
 }
 
 .wave-bg {
-  background: linear-gradient(45deg, #D6BCFA, #E5DEFF);
+  background: linear-gradient(45deg, rgba(214,188,250,0.3), rgba(229,222,255,0.3));
   mask-image: url('/lovable-uploads/53a33adf-b398-4270-b202-50898123bef0.png');
   mask-size: 200% 100%;
   -webkit-mask-image: url('/lovable-uploads/53a33adf-b398-4270-b202-50898123bef0.png');
@@ -47,13 +47,32 @@
 }
 
 .waitlist-form {
-  @apply fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-lg border-t border-gray-200 shadow-lg z-50;
+  @apply fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-xl border-t border-gray-200 shadow-2xl z-50;
 }
 
 .waitlist-input {
-  @apply h-12 rounded-xl border-gray-200 bg-white/80 backdrop-blur-sm transition-all duration-300 focus:ring-2 focus:ring-primary/20;
+  @apply h-12 rounded-xl border-gray-200 bg-white/90 backdrop-blur-sm transition-all duration-300 focus:ring-2 focus:ring-primary/20;
 }
 
 .waitlist-button {
-  @apply h-12 w-full whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90 hover:shadow-lg hover:shadow-primary/10;
+  @apply h-12 w-full whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90 hover:shadow-xl hover:shadow-primary/10;
+}
+
+/* New animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Enhanced gradients */
+.gradient-border {
+  @apply relative before:absolute before:inset-0 before:-z-10 before:rounded-xl before:p-1 before:bg-gradient-to-r before:from-purple-400/20 before:via-pink-400/20 before:to-blue-400/20;
 }

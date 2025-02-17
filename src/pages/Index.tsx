@@ -1,3 +1,4 @@
+
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
@@ -10,19 +11,19 @@ import { Sparkle } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-gradient-to-b from-white to-purple-50/30">
       <Header />
       
-      {/* Hero section with gradient background */}
-      <div className="relative">
+      {/* Hero section with enhanced gradient background */}
+      <div className="relative overflow-hidden">
         {/* Wave background */}
-        <div className="absolute inset-0 wave-bg opacity-60" />
+        <div className="absolute inset-0 wave-bg opacity-40" />
         
         {/* Gradient background layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-200/40 via-purple-200/40 to-blue-200/40" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-purple-300/30 via-pink-200/30 to-blue-200/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-100/20 via-purple-100/20 to-blue-100/20 blur-3xl" />
-        <div className="absolute inset-0 backdrop-blur-[50px] bg-white/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-200/30 via-purple-200/30 to-blue-200/30" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-300/20 via-pink-200/20 to-blue-200/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-100/10 via-purple-100/10 to-blue-100/10 blur-3xl" />
+        <div className="absolute inset-0 backdrop-blur-[100px] bg-white/5" />
         
         {/* Hero content */}
         <div className="relative">
@@ -30,23 +31,33 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Rest of the content without gradient */}
-      <div className="bg-white">
+      {/* Content sections with enhanced styling */}
+      <div className="relative">
         <StepsSection />
-        <FeaturesSection />
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-purple-50/30 to-white/80" />
+          <div className="relative">
+            <FeaturesSection />
+          </div>
+        </div>
         <PlatformSection />
-        <BenefitsSection />
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-purple-50/30" />
+          <div className="relative">
+            <BenefitsSection />
+          </div>
+        </div>
         <PricingSection />
         
-        {/* Call to Action */}
+        {/* Enhanced Call to Action */}
         <div className="container mx-auto px-4 mb-20">
-          <div className="rounded-2xl bg-gradient-to-r from-secondary/20 to-accent/20 p-8">
+          <div className="rounded-3xl bg-gradient-to-r from-purple-100/50 to-pink-100/50 p-12 shadow-xl">
             <div className="flex flex-col items-center text-center">
-              <div className="mb-4 rounded-full bg-primary/10 p-4">
-                <Sparkle className="h-8 w-8 text-primary" />
+              <div className="mb-6 rounded-full bg-primary/10 p-5 backdrop-blur-sm">
+                <Sparkle className="h-10 w-10 text-primary animate-pulse" />
               </div>
-              <h3 className="mb-4 text-2xl font-bold text-text">Transform Your Beauty Brand Vision into Reality</h3>
-              <p className="max-w-2xl text-text-muted">
+              <h3 className="mb-6 text-3xl font-bold text-text">Transform Your Beauty Brand Vision into Reality</h3>
+              <p className="max-w-2xl text-lg text-text-muted">
                 Join hundreds of successful beauty entrepreneurs who've launched their dream products with us. 
                 Get access to premium formulations, sustainable packaging, and industry-leading support.
               </p>
