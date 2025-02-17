@@ -1,3 +1,4 @@
+
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 export const Footer = () => {
@@ -33,6 +34,9 @@ export const Footer = () => {
         <div className="mt-4 text-center border-t border-gray-200 pt-4">
           <p className="text-sm text-text-muted">
             Mixinmist is a product of Ayurvedology Healthtech Private Limited
+          </p>
+          <p className="text-sm text-text-muted mt-2">
+            Operate with no minimum order requirements
           </p>
         </div>
 
