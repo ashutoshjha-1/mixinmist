@@ -48,6 +48,13 @@ export const Footer = () => {
           </p>
         </div>
 
+        {/* Parent Company Info */}
+        <div className="mt-8 text-center border-t border-gray-200 pt-4">
+          <p className="text-sm text-text-muted">
+            Mixinmist is a product of Ayurvedology Healthtech Private Limited
+          </p>
+        </div>
+
         {/* Facebook Disclaimer */}
         <div className="mt-8 text-center border-t border-gray-200 pt-4">
           <p className="text-xs text-text-muted max-w-2xl mx-auto">
