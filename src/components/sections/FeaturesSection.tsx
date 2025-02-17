@@ -41,8 +41,8 @@ export const FeaturesSection = () => {
         />
         <FeatureCard
           icon={Bot}
-          title="Custom Formulation"
-          description="Work with our team to create unique products for your brand."
+          title="No Minimum Orders"
+          description="Start small and scale up - launch your brand with no minimum order requirements."
         />
       </div>
 
