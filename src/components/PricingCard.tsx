@@ -11,12 +11,12 @@ interface PricingCardProps {
 export const PricingCard = ({ title, features, highlight, popular }: PricingCardProps) => {
   return (
     <div 
-      className={`glass-card rounded-3xl p-6 sm:p-8 hover-lift relative ${
+      className={`glass-card rounded-3xl p-6 sm:p-8 hover-lift relative mt-6 ${
         highlight ? 'border-2 border-primary shadow-lg shadow-primary/20' : ''
       }`}
     >
       {popular && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium animate-pulse z-10 shadow-lg">
+        <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-1.5 rounded-full text-sm font-medium animate-pulse z-50 shadow-xl">
           Most Popular
         </span>
       )}
