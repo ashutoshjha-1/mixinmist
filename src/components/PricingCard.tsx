@@ -16,7 +16,7 @@ export const PricingCard = ({ title, features, highlight, popular }: PricingCard
       }`}
     >
       {popular && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium animate-pulse">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium animate-pulse z-10 shadow-lg">
           Most Popular
         </span>
       )}
