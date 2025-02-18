@@ -8,7 +8,7 @@ export const PricingSection = () => {
       <p className="mx-auto mb-12 max-w-2xl text-center text-text-muted">
         Select the perfect plan for your beauty brand journey
       </p>
-      <div className="grid gap-8 md:grid-cols-3 pt-6">
+      <div className="grid gap-8 md:grid-cols-3">
         <PricingCard
           title="Starter Plan"
           features={[

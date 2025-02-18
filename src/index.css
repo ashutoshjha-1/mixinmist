@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,21 +22,6 @@
 .glass-card {
   @apply backdrop-blur-md bg-white/95 border border-white/40 shadow-xl transition-all duration-300;
   background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.1) 0%, transparent 50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.glass-card:hover::before {
-  opacity: 1;
 }
 
 .hover-lift {
@@ -137,81 +123,4 @@
     rgba(255,255,255,0.7)
   );
   border: 1px solid rgba(255,255,255,0.3);
-}
-
-/* Enhanced parallax effect */
-.parallax {
-  will-change: transform;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-}
-
-/* Complex animations */
-@keyframes float-complex {
-  0%, 100% {
-    transform: translateY(0) rotate(0);
-  }
-  25% {
-    transform: translateY(-10px) rotate(2deg);
-  }
-  75% {
-    transform: translateY(8px) rotate(-2deg);
-  }
-}
-
-.animate-float-complex {
-  animation: float-complex 8s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(155,135,245,0.2);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(155,135,245,0.4);
-  }
-}
-
-.animate-glow {
-  animation: glow 4s ease-in-out infinite;
-}
-
-/* Mouse follow effect */
-.follow-mouse {
-  transition: transform 0.1s ease-out;
-}
-
-/* Enhanced glassmorphism */
-.glass-effect {
-  @apply backdrop-blur-xl;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.9),
-    rgba(255,255,255,0.7)
-  );
-  border: 1px solid rgba(255,255,255,0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-effect::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  background: radial-gradient(
-    circle at center,
-    rgba(255,255,255,0.8),
-    transparent 70%
-  );
-  opacity: 0.5;
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
