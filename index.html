@@ -30,28 +30,29 @@
       gtag('js', new Date());
       gtag('config', 'G-RB428G5QXM');
     </script>
-
-    <!-- Chatwoot Widget -->
-    <script>
-      (function(d,t) {
-        var BASE_URL="https://support.ayurvedology.com";
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+"/packs/js/sdk.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g,s);
-        g.onload=function(){
-          window.chatwootSDK.run({
-            websiteToken: 'sjmxwrTiEQgCRt9bs7qHkK8k',
-            baseUrl: BASE_URL
-          })
-        }
-      })(document,"script");
-    </script>
   </head>
 
   <body>
     <div id="root"></div>
+    <!-- Chatwoot Widget -->
+    <script>
+      window.addEventListener('load', function() {
+        (function(d,t) {
+          var BASE_URL="https://support.ayurvedology.com";
+          var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=BASE_URL+"/packs/js/sdk.js";
+          g.defer = true;
+          g.async = true;
+          s.parentNode.insertBefore(g,s);
+          g.onload=function(){
+            window.chatwootSDK.run({
+              websiteToken: 'sjmxwrTiEQgCRt9bs7qHkK8k',
+              baseUrl: BASE_URL
+            })
+          }
+        })(document,"script");
+      });
+    </script>
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
