@@ -11,7 +11,7 @@ export const PricingSection = () => {
       {
         title: "Starter Plan",
         emoji: "💡",
-        price: "699",
+        price: "6XX",
         tag: "Starter",
         features: [
           "10 Pages",
@@ -26,7 +26,7 @@ export const PricingSection = () => {
       {
         title: "Growth Plan",
         emoji: "🚀",
-        price: "999",
+        price: "9XX",
         tag: "Growth",
         features: [
           "50 Pages",
@@ -43,7 +43,7 @@ export const PricingSection = () => {
       {
         title: "Business Plan",
         emoji: "🏆",
-        price: "1,999",
+        price: "1XXX",
         tag: "Business",
         features: [
           "Unlimited Pages",
@@ -58,7 +58,7 @@ export const PricingSection = () => {
       {
         title: "Enterprise Plan",
         emoji: "🔥",
-        price: "3,499",
+        price: "3XXX",
         tag: "Enterprise",
         features: [
           "Unlimited Pages",
@@ -75,7 +75,7 @@ export const PricingSection = () => {
       {
         title: "Starter Plan",
         emoji: "💡",
-        price: "6,999",
+        price: "XXXX",
         tag: "Starter",
         features: [
           "20 Pages",
@@ -90,7 +90,7 @@ export const PricingSection = () => {
       {
         title: "Growth Plan",
         emoji: "🚀",
-        price: "9,999",
+        price: "XXXX",
         tag: "Growth",
         features: [
           "50 Pages",
@@ -107,7 +107,7 @@ export const PricingSection = () => {
       {
         title: "Business Plan",
         emoji: "🏆",
-        price: "16,999",
+        price: "XXXX",
         tag: "Business",
         features: [
           "Unlimited Pages",
@@ -122,7 +122,7 @@ export const PricingSection = () => {
       {
         title: "Enterprise Plan",
         emoji: "🔥",
-        price: "29,999",
+        price: "XXXX",
         tag: "Enterprise",
         features: [
           "Unlimited Pages",

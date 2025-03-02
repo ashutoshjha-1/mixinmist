@@ -29,10 +29,12 @@ export const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <div 
-      className={`glass-card rounded-xl p-6 sm:p-8 hover-lift relative flex flex-col h-full 
-        ${highlight ? 'border-2 border-primary scale-105 shadow-lg shadow-primary/20' : 'border-2 border-gray-200'}
-        transition-all duration-300
+      className={`rounded-xl p-6 sm:p-8 relative flex flex-col h-full border-2 
+        ${highlight ? 'border-primary shadow-lg' : 'border-gray-200'}
+        ${highlight ? 'bg-white z-10' : 'bg-white'} 
+        transition-all duration-300 hover:border-primary/70 hover:shadow-md
       `}
+      style={highlight ? { transform: 'scale(1.05)' } : {}}
     >
       {tag && (
         <span className="absolute right-4 top-4 bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-medium">
@@ -41,7 +43,7 @@ export const PricingCard = ({
       )}
       
       {popular && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium animate-pulse">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-1 rounded-full text-sm font-medium">
           Most Popular
         </span>
       )}
@@ -77,16 +79,14 @@ export const PricingCard = ({
       <div className="mt-auto space-y-3">
         <Button 
           variant={highlight ? "default" : "outline"} 
-          className={`w-full font-bold text-center py-5 ${highlight ? 'bg-black hover:bg-gray-800' : 'bg-gray-50 border-2 border-gray-200 hover:bg-gray-100'}`}
+          className={`w-full font-bold text-center py-5 ${highlight ? 'bg-primary hover:bg-primary/90' : 'bg-gray-50 border-2 border-gray-200 hover:bg-gray-100'}`}
         >
           {buttonText}
         </Button>
         
-        {!highlight && (
-          <button className="w-full text-sm text-text-muted hover:underline">
-            View All Features
-          </button>
-        )}
+        <button className="w-full text-sm text-text-muted hover:underline">
+          View All Features
+        </button>
       </div>
     </div>
   );
