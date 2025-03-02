@@ -144,7 +144,7 @@ export const PricingSection = () => {
         Select the perfect plan for your beauty brand journey
       </p>
       
-      {/* Billing period toggle */}
+      {/* Billing period toggle - Fixed alignment */}
       <div className="flex justify-center mb-12">
         <Tabs 
           defaultValue="monthly"
@@ -152,16 +152,16 @@ export const PricingSection = () => {
           onValueChange={(value) => setBillingPeriod(value as "monthly" | "annual")}
           className="w-auto"
         >
-          <TabsList className="grid w-72 grid-cols-2 p-1 bg-gray-100 border-2 border-gray-200">
+          <TabsList className="grid w-80 grid-cols-2 p-1 bg-gray-100 border border-gray-200 rounded-md">
             <TabsTrigger 
               value="monthly" 
-              className="data-[state=active]:bg-black data-[state=active]:text-white font-bold py-3 px-6"
+              className="data-[state=active]:bg-black data-[state=active]:text-white font-bold py-3 px-6 rounded-md"
             >
               Monthly Plans
             </TabsTrigger>
             <TabsTrigger 
               value="annual" 
-              className="data-[state=active]:bg-black data-[state=active]:text-white font-bold py-3 px-6"
+              className="data-[state=active]:bg-black data-[state=active]:text-white font-bold py-3 px-6 rounded-md"
             >
               Annual Plans
             </TabsTrigger>

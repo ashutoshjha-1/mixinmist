@@ -79,7 +79,7 @@ export const PricingCard = ({
       <div className="mt-auto space-y-3">
         <Button 
           variant={highlight ? "default" : "outline"} 
-          className={`w-full font-bold text-center py-5 ${highlight ? 'bg-primary hover:bg-primary/90' : 'bg-gray-50 border-2 border-gray-200 hover:bg-gray-100'}`}
+          className={`w-full font-bold text-center py-5 ${highlight ? 'bg-black text-white hover:bg-gray-800' : 'bg-gray-50 border-2 border-gray-200 hover:bg-gray-100'}`}
         >
           {buttonText}
         </Button>
