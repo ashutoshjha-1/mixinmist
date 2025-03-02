@@ -12,35 +12,6 @@ export const FeaturesSection = () => {
         </p>
       </div>
 
-      {/* Product Showcase */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
-        <div className="flex flex-col items-center">
-          <div className="relative mb-8 transition-all duration-500 hover:scale-105">
-            <img 
-              src="/lovable-uploads/3688ad9c-9fdb-41f3-a6c2-d1bf0fb8a011.png" 
-              alt="Premium serum bottle" 
-              className="h-auto max-h-[300px] object-contain drop-shadow-2xl"
-            />
-            <div className="absolute inset-0 -z-10 rounded-full bg-purple-100/40 blur-2xl"></div>
-          </div>
-          <h3 className="text-2xl font-bold mb-2">Premium Serums</h3>
-          <p className="text-center text-text-muted">Highly effective formulations with premium active ingredients</p>
-        </div>
-        
-        <div className="flex flex-col items-center">
-          <div className="relative mb-8 transition-all duration-500 hover:scale-105">
-            <img 
-              src="/lovable-uploads/fbf54c47-9f2d-4bc4-ab9b-c0fb0cdcd726.png" 
-              alt="Skin cream tube" 
-              className="h-auto max-h-[300px] object-contain drop-shadow-2xl"
-            />
-            <div className="absolute inset-0 -z-10 rounded-full bg-purple-100/40 blur-2xl"></div>
-          </div>
-          <h3 className="text-2xl font-bold mb-2">Luxurious Creams</h3>
-          <p className="text-center text-text-muted">Hydrating and nourishing formulas for all skin types</p>
-        </div>
-      </div>
-
       {/* Product Categories Grid */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <FeatureCard

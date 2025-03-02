@@ -1,11 +1,9 @@
-
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sparkle, Flower2 } from "lucide-react";
-
 export const HeroSection = () => {
   const isMobile = useIsMobile();
-  return <section className="container relative mx-auto flex min-h-[100svh] flex-col items-center justify-center px-4 text-center py-[2px] pt-24">
+  return <section className="container relative mx-auto flex min-h-[100svh] flex-col items-center justify-center px-4 text-center py-[2px]">
       {/* Striped background */}
       <div className="absolute inset-0 -z-10" style={{
       backgroundColor: "#ffffff",
@@ -28,20 +26,9 @@ export const HeroSection = () => {
         <p className="animate-fade-in mt-2 max-w-2xl text-base sm:text-lg font-bold text-text-muted">
           Launch your beauty brand in minutes, not months.
         </p>
-
-        <div className="flex flex-col-reverse md:flex-row items-center gap-6 mt-6 mb-12">
-          <div className="relative animate-fade-in-up mt-4 max-w-xs">
-            <img 
-              src="/lovable-uploads/ddf7a176-20b7-422b-a488-e634eeb8ef1e.png" 
-              alt="Premium serum bottle" 
-              className="h-auto max-h-[300px] object-contain drop-shadow-2xl hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute inset-0 rounded-full bg-white/30 backdrop-blur-sm -z-10 filter blur-xl"></div>
-          </div>
-          
-          <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-4' : ''}`}>
-            <WaitlistForm />
-          </div>
+        
+        <div className={`animate-fade-in-up w-full max-w-md ${isMobile ? 'mt-4 mb-12' : 'mt-8'}`}>
+          <WaitlistForm />
         </div>
       </div>
 

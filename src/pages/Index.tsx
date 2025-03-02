@@ -20,7 +20,7 @@ const Index = () => {
         <Header />
         
         {/* Hero section with enhanced background */}
-        <div className="relative overflow-hidden mt-16">
+        <div className="relative overflow-hidden">
           {/* Wave background */}
           <div className="absolute inset-0 wave-bg opacity-40" />
           
@@ -61,27 +61,17 @@ const Index = () => {
           {/* Enhanced Call to Action */}
           <div className="container mx-auto px-4 mb-20">
             <div className="rounded-3xl p-12 glass-effect">
-              <div className="flex flex-col md:flex-row items-center gap-10">
-                <div className="md:w-1/3 relative">
-                  <img 
-                    src="/lovable-uploads/ddf7a176-20b7-422b-a488-e634eeb8ef1e.png" 
-                    alt="Premium serum bottle" 
-                    className="h-auto max-h-[300px] mx-auto object-contain drop-shadow-2xl hover:scale-105 transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 -z-10 rounded-full bg-purple-100/20 blur-3xl"></div>
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-6 rounded-full bg-primary/10 p-5 backdrop-blur-sm animate-soft-pulse">
+                  <Sparkle className="h-10 w-10 text-primary" />
                 </div>
-                <div className="md:w-2/3 flex flex-col items-center text-center">
-                  <div className="mb-6 rounded-full bg-primary/10 p-5 backdrop-blur-sm animate-soft-pulse">
-                    <Sparkle className="h-10 w-10 text-primary" />
-                  </div>
-                  <h3 className="mb-6 text-3xl font-bold text-text">
-                    Transform Your Beauty Brand Vision into Reality
-                  </h3>
-                  <p className="max-w-2xl text-lg text-text-muted">
-                    Join hundreds of successful beauty entrepreneurs who've launched their dream products with us. 
-                    Get access to premium formulations, sustainable packaging, and industry-leading support.
-                  </p>
-                </div>
+                <h3 className="mb-6 text-3xl font-bold text-text">
+                  Transform Your Beauty Brand Vision into Reality
+                </h3>
+                <p className="max-w-2xl text-lg text-text-muted">
+                  Join hundreds of successful beauty entrepreneurs who've launched their dream products with us. 
+                  Get access to premium formulations, sustainable packaging, and industry-leading support.
+                </p>
               </div>
             </div>
           </div>
