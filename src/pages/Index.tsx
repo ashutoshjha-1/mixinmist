@@ -20,7 +20,7 @@ const Index = () => {
         <Header />
         
         {/* Hero section with enhanced background */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden mt-16">
           {/* Wave background */}
           <div className="absolute inset-0 wave-bg opacity-40" />
           
