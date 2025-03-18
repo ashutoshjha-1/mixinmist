@@ -8,6 +8,7 @@ import { StepsSection } from "@/components/sections/StepsSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Sparkle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -57,6 +58,40 @@ const Index = () => {
             </div>
           </div>
           <PricingSection />
+          
+          {/* Dashboard Preview Section */}
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="mb-12 flex flex-col items-center text-center">
+                <h2 className="mb-4 text-3xl font-bold md:text-4xl">Powerful Seller Dashboard</h2>
+                <p className="max-w-2xl text-lg text-text-muted">
+                  Create and manage your branded beauty products with our intuitive dashboard. 
+                  Upload logos, customize designs, and track your orders in one place.
+                </p>
+              </div>
+              
+              <div className="relative mx-auto max-w-6xl">
+                {/* Glass card for the dashboard preview */}
+                <div className="glass-card hover-lift rounded-2xl p-3 shadow-2xl">
+                  <img 
+                    src="/lovable-uploads/9ef6c83b-5828-4a70-8324-58153362da1f.png" 
+                    alt="MIXINMIST Seller Dashboard Interface"
+                    className="w-full rounded-xl shadow-sm"
+                  />
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute -bottom-8 -left-8 h-20 w-20 rounded-full bg-purple-200/30 blur-2xl"></div>
+                <div className="absolute -top-8 -right-8 h-20 w-20 rounded-full bg-pink-200/30 blur-2xl"></div>
+              </div>
+              
+              <div className="mt-12 flex justify-center">
+                <Button className="h-12 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90">
+                  Start Creating Your Products
+                </Button>
+              </div>
+            </div>
+          </section>
           
           {/* Enhanced Call to Action */}
           <div className="container mx-auto px-4 mb-20">
