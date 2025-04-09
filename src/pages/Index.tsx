@@ -7,7 +7,7 @@ import { PricingSection } from "@/components/sections/PricingSection";
 import { StepsSection } from "@/components/sections/StepsSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Sparkle } from "lucide-react";
+import { Sparkle, DollarSign, ShoppingCart, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -57,6 +57,88 @@ const Index = () => {
               <BenefitsSection />
             </div>
           </div>
+
+          {/* No Shopify Costs Section */}
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="mb-12 flex flex-col items-center text-center">
+                <div className="mb-6 rounded-full bg-green-100 p-3">
+                  <DollarSign className="h-8 w-8 text-green-600" />
+                </div>
+                <h2 className="mb-4 text-3xl font-bold md:text-4xl">No Additional Shopify Costs</h2>
+                <p className="max-w-2xl text-lg text-text-muted">
+                  Launch your beauty brand without the burden of Shopify's expensive platform fees and add-ons.
+                </p>
+              </div>
+              
+              <div className="grid gap-8 md:grid-cols-2 md:items-center">
+                <div className="glass-card hover-lift rounded-2xl p-8">
+                  <div className="mb-6">
+                    <ShoppingCart className="h-10 w-10 text-red-500" />
+                  </div>
+                  <h3 className="mb-4 text-2xl font-bold">Shopify's Hidden Costs</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-red-500">&#x2715;</span>
+                      <span>Monthly subscription fees starting at $29/month</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-red-500">&#x2715;</span>
+                      <span>Transaction fees (0.5-2% per sale)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-red-500">&#x2715;</span>
+                      <span>Expensive apps and add-ons for basic functionality</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-red-500">&#x2715;</span>
+                      <span>Premium themes costing $150-$350</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-red-500">&#x2715;</span>
+                      <span>Development costs for customizations</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="glass-card hover-lift rounded-2xl p-8 border-green-100">
+                  <div className="mb-6">
+                    <CheckCircle2 className="h-10 w-10 text-green-500" />
+                  </div>
+                  <h3 className="mb-4 text-2xl font-bold">MIXINMIST Advantage</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-green-500">&#x2713;</span>
+                      <span>All-inclusive pricing with no hidden fees</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-green-500">&#x2713;</span>
+                      <span>No transaction fees - keep more of your earnings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-green-500">&#x2713;</span>
+                      <span>Built-in marketing tools at no extra cost</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-green-500">&#x2713;</span>
+                      <span>Free beautifully designed templates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 text-green-500">&#x2713;</span>
+                      <span>Free customizations and personalized support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-10 text-center">
+                <Button className="h-12 whitespace-nowrap rounded-xl bg-black px-6 text-white transition-all hover:bg-black/90">
+                  Start Saving Today
+                </Button>
+              </div>
+            </div>
+          </section>
+          
           <PricingSection />
           
           {/* Dashboard Preview Section */}
