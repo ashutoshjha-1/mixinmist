@@ -36,11 +36,20 @@ export const PricingCard = ({
       `}
       style={highlight ? { transform: 'scale(1.05)' } : {}}
     >
-      {tag && (
-        <span className="absolute right-4 top-4 bg-gray-200 text-black px-4 py-1 rounded-full text-sm font-medium">
-          {tag}
-        </span>
-      )}
+      <div className="flex justify-between items-start mb-2">
+        <div className="flex items-center space-x-2">
+          <h3 className="text-xl sm:text-2xl font-bold">
+            {title}
+          </h3>
+          {emoji && <span className="text-2xl">{emoji}</span>}
+        </div>
+        
+        {tag && (
+          <span className="bg-gray-200 text-black px-3 py-1 rounded-full text-sm font-medium">
+            {tag}
+          </span>
+        )}
+      </div>
       
       {popular && (
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -48,24 +57,18 @@ export const PricingCard = ({
         </span>
       )}
       
-      <div className="mb-6">
-        <h3 className="text-xl sm:text-2xl font-bold mb-2">
-          {title} {emoji}
-        </h3>
-        
-        {description && (
-          <p className="text-text-muted text-sm italic mb-4">"{description}"</p>
-        )}
-        
-        {price && (
-          <div className="flex items-baseline">
-            <span className="text-4xl font-bold">₹{price}</span>
-            <span className="text-text-muted text-sm ml-1">
-              {billingPeriod === "monthly" ? "/mo" : "/yr"}
-            </span>
-          </div>
-        )}
-      </div>
+      {description && (
+        <p className="text-text-muted text-sm italic mb-4">"{description}"</p>
+      )}
+      
+      {price && (
+        <div className="flex items-baseline mb-4">
+          <span className="text-4xl font-bold">₹{price}</span>
+          <span className="text-text-muted text-sm ml-1">
+            {billingPeriod === "monthly" ? "/mo" : "/yr"}
+          </span>
+        </div>
+      )}
       
       <ul className="space-y-3 mb-6 flex-grow text-left">
         {features.map((feature, index) => (
