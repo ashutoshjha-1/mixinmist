@@ -68,37 +68,44 @@ export const PricingSection = () => {
     annual: [{
       title: "Starter Plan",
       emoji: "💡",
-      price: "XXXX",
+      price: "8,999",
       tag: "Starter",
-      features: ["20 Pages", "20 Products", "20 Blog Posts", "1024 MB Storage", "Basic Support"],
-      description: "Save more with a full year of benefits!",
-      buttonText: "Get Annual Plan"
+      features: [
+        "Page 20",
+        "Product 20", 
+        "Blog 20",
+        "Storage 1024 MB"
+      ],
+      description: "Ideal for small businesses beginning their online journey",
+      buttonText: "Buy Now"
     }, {
       title: "Growth Plan",
       emoji: "🚀",
-      price: "XXXX",
+      price: "9,999",
       tag: "Growth",
-      features: ["50 Pages", "50 Products", "50 Blog Posts", "5120 MB Storage", "Priority Support"],
+      features: [
+        "Page 50",
+        "Product 50",
+        "Blog 50",
+        "Storage 5120 MB"
+      ],
       highlight: true,
       popular: true,
-      description: "Best value for growing businesses!",
-      buttonText: "Get Annual Growth"
+      description: "For businesses expanding their digital footprint",
+      buttonText: "Buy Now"
     }, {
       title: "Business Plan",
       emoji: "🏆",
-      price: "XXXX",
+      price: "16,999",
       tag: "Business",
-      features: ["Unlimited Pages", "Unlimited Products", "Unlimited Blog Posts", "Unlimited Storage", "Advanced Support"],
-      description: "Unlock exclusive features with yearly savings!",
-      buttonText: "Get Annual Business"
-    }, {
-      title: "Enterprise Plan",
-      emoji: "🔥",
-      price: "XXXX",
-      tag: "Enterprise",
-      features: ["Unlimited Pages", "Unlimited Products", "Unlimited Blog Posts", "Unlimited Storage", "Dedicated Account Manager"],
-      description: "Ultimate enterprise solution with maximum savings!",
-      buttonText: "Start Enterprise"
+      features: [
+        "Page Unlimited",
+        "Product Unlimited",
+        "Blog Unlimited",
+        "Storage Unlimited"
+      ],
+      description: "Tailored for established businesses aiming for growth",
+      buttonText: "Buy Now"
     }]
   };
 
