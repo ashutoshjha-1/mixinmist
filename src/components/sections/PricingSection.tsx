@@ -1,43 +1,69 @@
 import { useState } from "react";
 import { PricingCard } from "@/components/PricingCard";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 export const PricingSection = () => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">("monthly");
+  
   const pricingData = {
     monthly: [{
       title: "Starter Plan",
       emoji: "💡",
-      price: "6XX",
+      price: "899",
       tag: "Starter",
-      features: ["10 Pages", "10 Products", "10 Blog Posts", "1024 MB Storage", "Basic Support"],
+      features: [
+        "10 Pages",
+        "10 Products",
+        "10 Blog Posts",
+        "1024 MB Storage",
+        "Basic Support"
+      ],
       description: "Perfect for beginners taking their first steps!",
-      buttonText: "Get Started"
+      buttonText: "Buy Now"
     }, {
       title: "Growth Plan",
       emoji: "🚀",
-      price: "9XX",
+      price: "999",
       tag: "Growth",
-      features: ["50 Pages", "50 Products", "50 Blog Posts", "5120 MB Storage", "Priority Support"],
+      features: [
+        "50 Pages",
+        "50 Products",
+        "50 Blog Posts",
+        "5120 MB Storage",
+        "Priority Support"
+      ],
       highlight: true,
       popular: true,
-      description: "Scale up your business with powerful features!",
-      buttonText: "Upgrade Now"
+      description: "For businesses expanding their digital footprint!",
+      buttonText: "Buy Now"
     }, {
       title: "Business Plan",
       emoji: "🏆",
-      price: "1XXX",
+      price: "1,999",
       tag: "Business",
-      features: ["Unlimited Pages", "Unlimited Products", "Unlimited Blog Posts", "Unlimited Storage", "Advanced Support"],
-      description: "For established businesses ready to dominate!",
-      buttonText: "Get Business Plan"
+      features: [
+        "Unlimited Pages",
+        "Unlimited Products",
+        "Unlimited Blog Posts",
+        "Unlimited Storage",
+        "Advanced Support"
+      ],
+      description: "Targeted for established businesses aiming for growth!",
+      buttonText: "Buy Now"
     }, {
       title: "Enterprise Plan",
       emoji: "🔥",
-      price: "3XXX",
+      price: "3,499",
       tag: "Enterprise",
-      features: ["Unlimited Pages", "Unlimited Products", "Unlimited Blog Posts", "Unlimited Storage", "Dedicated Account Manager"],
-      description: "The ultimate solution for large-scale enterprises!",
-      buttonText: "Start Enterprise"
+      features: [
+        "Unlimited Pages",
+        "Unlimited Products",
+        "Unlimited Blog Posts",
+        "Unlimited Storage",
+        "Dedicated Account Manager"
+      ],
+      description: "With your custom Android and iOS App!",
+      buttonText: "Buy Now"
     }],
     annual: [{
       title: "Starter Plan",
@@ -75,13 +101,13 @@ export const PricingSection = () => {
       buttonText: "Start Enterprise"
     }]
   };
+
   return <section className="container mx-auto px-4 py-20">
       <h2 className="mb-4 text-center text-4xl font-bold text-text">Choose Your Plan</h2>
       <p className="mx-auto mb-8 max-w-2xl text-center text-text-muted">
         Select the perfect plan for your beauty brand journey
       </p>
       
-      {/* Billing period toggle - Fixed alignment */}
       <div className="flex justify-center mb-12">
         <Tabs defaultValue="monthly" value={billingPeriod} onValueChange={value => setBillingPeriod(value as "monthly" | "annual")} className="w-auto">
           <TabsList className="grid w-80 grid-cols-2 p-1 bg-gray-100 border border-gray-200 rounded-md px-0 my-[9px] py-0">
