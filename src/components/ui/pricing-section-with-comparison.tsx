@@ -220,25 +220,33 @@ function Pricing() {
       <div className="w-full py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 relative overflow-hidden">
+            <Card className="p-8 relative overflow-hidden rounded-2xl shadow-lg">
+              <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-purple-100/30 to-transparent rounded-bl-3xl" />
+              <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tr from-purple-100/30 to-transparent rounded-tr-3xl" />
+              
               <div className="flex flex-col md:flex-row justify-between gap-8">
                 <div className="space-y-4 flex-1">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-3xl font-bold text-black">Enterprise Plan</h3>
+                    <h3 className="text-3xl font-bold text-gray-800">Enterprise Plan</h3>
                     <span className="text-2xl">🔥</span>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-600 italic">
                     "With your custom Android and iOS App!"
                   </p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-black">₹3,499</span>
-                    <span className="text-muted-foreground">/mo</span>
+                    <span className="text-4xl font-bold text-gray-800">₹3,499</span>
+                    <span className="text-gray-500">/mo</span>
                   </div>
-                  <Button className="w-full md:w-auto bg-black text-white hover:bg-gray-800">Buy Now</Button>
+                  <Button 
+                    variant="outline" 
+                    className="w-full md:w-auto border-gray-300 hover:bg-gray-50"
+                  >
+                    Buy Now
+                  </Button>
                 </div>
                 
                 <div className="flex-1">
-                  <h4 className="font-semibold mb-4 text-black">Everything in Business, plus:</h4>
+                  <h4 className="font-semibold mb-4 text-gray-800">Everything in Business, plus:</h4>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-2">
                       <Check className="h-5 w-5 text-green-500" />
