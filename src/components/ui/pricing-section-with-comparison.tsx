@@ -1,67 +1,83 @@
-
-import { Check, Minus, MoveRight, PhoneCall } from "lucide-react";
+import { Check, Minus, MoveRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
-// Update the plan object to use the correct variant types
 const plans = {
   monthly: [
     {
-      title: "Startup",
-      price: "$40",
-      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
-      buttonText: "Try it",
+      title: "Starter",
+      subtitle: "Perfect for beginners taking their first steps!",
+      price: "₹899",
+      buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "outline" as const, // Add type assertion
+      variant: "outline" as const,
       highlighted: false
     },
     {
       title: "Growth",
-      price: "$40",
-      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
-      buttonText: "Try it",
+      subtitle: "For businesses expanding their digital footprint!",
+      price: "₹999",
+      buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "default" as const, // Add type assertion
+      variant: "default" as const,
       highlighted: true
     },
     {
+      title: "Business",
+      subtitle: "Targeted for established businesses aiming for growth!",
+      price: "₹1,999",
+      buttonText: "Buy Now",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "outline" as const,
+      highlighted: false
+    },
+    {
       title: "Enterprise",
-      price: "$40",
-      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
-      buttonText: "Contact us",
-      buttonIcon: <PhoneCall className="w-4 h-4" />,
-      variant: "outline" as const, // Add type assertion
+      subtitle: "With your custom Android and iOS App!",
+      price: "₹3,499",
+      buttonText: "Buy Now",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "outline" as const,
       highlighted: false
     }
   ],
   yearly: [
     {
-      title: "Startup",
-      price: "$400",
-      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
-      buttonText: "Try it",
+      title: "Starter",
+      subtitle: "Perfect for beginners taking their first steps!",
+      price: "₹9,999",
+      buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "outline" as const, // Add type assertion
+      variant: "outline" as const,
       highlighted: false
     },
     {
       title: "Growth",
-      price: "$400",
-      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
-      buttonText: "Try it",
+      subtitle: "For businesses expanding their digital footprint!",
+      price: "₹10,999",
+      buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "default" as const, // Add type assertion
+      variant: "default" as const,
       highlighted: true
     },
     {
+      title: "Business",
+      subtitle: "Targeted for established businesses aiming for growth!",
+      price: "₹21,999",
+      buttonText: "Buy Now",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "outline" as const,
+      highlighted: false
+    },
+    {
       title: "Enterprise",
-      price: "$400",
-      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
-      buttonText: "Contact us",
-      buttonIcon: <PhoneCall className="w-4 h-4" />,
-      variant: "outline" as const, // Add type assertion
+      subtitle: "With your custom Android and iOS App!",
+      price: "₹38,499",
+      buttonText: "Buy Now",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "outline" as const,
       highlighted: false
     }
   ]
@@ -69,40 +85,39 @@ const plans = {
 
 const features = [
   {
-    name: "SSO",
-    startup: true,
-    growth: true,
-    enterprise: true
+    name: "Pages",
+    starter: "10 Pages",
+    growth: "50 Pages",
+    business: "Unlimited Pages",
+    enterprise: "Unlimited Pages"
   },
   {
-    name: "AI Assistant",
-    startup: false,
-    growth: true,
-    enterprise: true
+    name: "Products",
+    starter: "10 Products",
+    growth: "50 Products",
+    business: "Unlimited Products",
+    enterprise: "Unlimited Products"
   },
   {
-    name: "Version Control",
-    startup: false,
-    growth: true,
-    enterprise: true
+    name: "Blog Posts",
+    starter: "10 Blog Posts",
+    growth: "50 Blog Posts",
+    business: "Unlimited Blog Posts",
+    enterprise: "Unlimited Blog Posts"
   },
   {
-    name: "Members",
-    startup: "5 members",
-    growth: "25 members",
-    enterprise: "100+ members"
+    name: "Storage",
+    starter: "1024 MB Storage",
+    growth: "5120 MB Storage",
+    business: "Unlimited Storage",
+    enterprise: "Unlimited Storage"
   },
   {
-    name: "Multiplayer Mode",
-    startup: false,
-    growth: true,
-    enterprise: true
-  },
-  {
-    name: "Orchestration",
-    startup: false,
-    growth: true,
-    enterprise: true
+    name: "Support",
+    starter: "Basic Support",
+    growth: "Priority Support",
+    business: "Advanced Support",
+    enterprise: "Dedicated Account Manager"
   }
 ];
 
@@ -162,7 +177,7 @@ function Pricing() {
                 }`}
               >
                 <h3 className="text-2xl font-semibold mb-4">{plan.title}</h3>
-                <p className="text-sm text-muted-foreground mb-8">{plan.description}</p>
+                <p className="text-sm text-muted-foreground mb-8">{plan.subtitle}</p>
                 
                 <div className="flex items-baseline gap-1 mb-8">
                   <span className="text-4xl font-bold">{plan.price}</span>
