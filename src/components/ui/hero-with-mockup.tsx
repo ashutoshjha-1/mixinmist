@@ -3,19 +3,13 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Mockup } from "@/components/ui/mockup"
 import { Glow } from "@/components/ui/glow"
-import { Github } from "lucide-react"
 
 interface HeroWithMockupProps {
   title: string
   description: string
-  primaryCta?: {
+  primaryCta: {
     text: string
     href: string
-  }
-  secondaryCta?: {
-    text: string
-    href: string
-    icon?: React.ReactNode
   }
   mockupImage: {
     src: string
@@ -24,23 +18,32 @@ interface HeroWithMockupProps {
     height: number
   }
   className?: string
+  renderPrimaryCta?: (button: React.ReactNode) => React.ReactNode
 }
 
 export function HeroWithMockup({
   title,
   description,
-  primaryCta = {
-    text: "Get Started",
-    href: "/get-started",
-  },
-  secondaryCta = {
-    text: "GitHub",
-    href: "https://github.com/your-repo",
-    icon: <Github className="mr-2 h-4 w-4" />,
-  },
+  primaryCta,
   mockupImage,
   className,
+  renderPrimaryCta,
 }: HeroWithMockupProps) {
+  const primaryButton = (
+    <Button
+      asChild
+      size="lg"
+      className={cn(
+        "bg-gradient-to-b from-brand to-brand/90 dark:from-brand/90 dark:to-brand/80",
+        "hover:from-brand/95 hover:to-brand/85 dark:hover:from-brand/80 dark:hover:to-brand/70",
+        "text-white shadow-lg",
+        "transition-all duration-300",
+      )}
+    >
+      <a href={primaryCta.href}>{primaryCta.text}</a>
+    </Button>
+  );
+
   return (
     <section
       className={cn(
@@ -83,33 +86,7 @@ export function HeroWithMockup({
             className="relative z-10 flex flex-wrap justify-center gap-4 
             animate-appear opacity-0 [animation-delay:300ms]"
           >
-            <Button
-              asChild
-              size="lg"
-              className={cn(
-                "bg-gradient-to-b from-brand to-brand/90 dark:from-brand/90 dark:to-brand/80",
-                "hover:from-brand/95 hover:to-brand/85 dark:hover:from-brand/80 dark:hover:to-brand/70",
-                "text-white shadow-lg",
-                "transition-all duration-300",
-              )}
-            >
-              <a href={primaryCta.href}>{primaryCta.text}</a>
-            </Button>
-
-            <Button
-              asChild
-              size="lg"
-              variant="ghost"
-              className={cn(
-                "text-foreground/80 dark:text-foreground/70",
-                "transition-all duration-300",
-              )}
-            >
-              <a href={secondaryCta.href}>
-                {secondaryCta.icon}
-                {secondaryCta.text}
-              </a>
-            </Button>
+            {renderPrimaryCta ? renderPrimaryCta(primaryButton) : primaryButton}
           </div>
 
           {/* Mockup */}
