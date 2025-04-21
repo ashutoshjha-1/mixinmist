@@ -1,4 +1,4 @@
-import { Check, Minus, MoveRight } from "lucide-react";
+import { MoveRight, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -63,7 +63,16 @@ const plans = {
       variant: "outline" as const,
       highlighted: false
     }
-  ]
+  ],
+  enterprise: {
+    title: "Enterprise Plan",
+    subtitle: "With your custom Android and iOS App!",
+    price: "₹3,499",
+    buttonText: "Buy Now",
+    buttonIcon: <MoveRight className="w-4 h-4" />,
+    variant: "default" as const,
+    highlighted: true
+  }
 };
 
 const features = [
@@ -107,9 +116,9 @@ function Pricing() {
       <div className="w-full py-20">
         <div className="container mx-auto px-4">
           <div className="flex text-center justify-center items-center gap-4 flex-col">
-            <Badge>Pricing</Badge>
+            <Badge className="bg-black text-white">Pricing</Badge>
             <div className="flex gap-2 flex-col">
-              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-regular">
+              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-bold text-black">
                 Simple, transparent pricing
               </h2>
               <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
@@ -215,21 +224,21 @@ function Pricing() {
               <div className="flex flex-col md:flex-row justify-between gap-8">
                 <div className="space-y-4 flex-1">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-3xl font-bold">Enterprise Plan</h3>
+                    <h3 className="text-3xl font-bold text-black">Enterprise Plan</h3>
                     <span className="text-2xl">🔥</span>
                   </div>
                   <p className="text-muted-foreground">
                     "With your custom Android and iOS App!"
                   </p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold">₹3,499</span>
+                    <span className="text-4xl font-bold text-black">₹3,499</span>
                     <span className="text-muted-foreground">/mo</span>
                   </div>
-                  <Button className="w-full md:w-auto">Buy Now</Button>
+                  <Button className="w-full md:w-auto bg-black text-white hover:bg-gray-800">Buy Now</Button>
                 </div>
                 
                 <div className="flex-1">
-                  <h4 className="font-semibold mb-4">Everything in Business, plus:</h4>
+                  <h4 className="font-semibold mb-4 text-black">Everything in Business, plus:</h4>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-2">
                       <Check className="h-5 w-5 text-green-500" />
