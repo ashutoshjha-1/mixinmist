@@ -1,4 +1,3 @@
-
 import { Check, Minus, MoveRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -135,21 +134,7 @@ function Pricing() {
             </div>
 
             {/* Main pricing grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-6xl">
-              {/* Features Column */}
-              <div className="hidden md:block">
-                <div className="h-[300px]"></div>
-                <div className="mt-8 space-y-6">
-                  <p className="font-semibold text-lg">Features</p>
-                  {features.map((feature) => (
-                    <div key={feature.name} className="py-4 text-left">
-                      {feature.name}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Plan Columns */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
               {plans[billingCycle].map((plan) => (
                 <div
                   key={plan.title}
@@ -173,26 +158,47 @@ function Pricing() {
                   </Button>
 
                   {/* Features list */}
-                  <div className="hidden md:block mt-[300px] space-y-6">
-                    {features.map((feature) => (
-                      <div key={feature.name} className="py-4 text-center">
-                        <span className="text-sm">
-                          {feature[plan.title.toLowerCase() as keyof typeof feature]}
-                        </span>
+                  <div className="mt-8 space-y-6">
+                    <div className="py-4">
+                      <div className="font-medium mb-4">Pages</div>
+                      <div className="text-sm text-muted-foreground">
+                        {plan.title === "Starter" ? "10 Pages" : 
+                         plan.title === "Growth" ? "50 Pages" : 
+                         "Unlimited Pages"}
                       </div>
-                    ))}
-                  </div>
-
-                  {/* Mobile Features */}
-                  <div className="md:hidden mt-8">
-                    {features.map((feature) => (
-                      <div key={feature.name} className="py-4 border-t">
-                        <div className="font-medium mb-2">{feature.name}</div>
-                        <div className="text-sm text-muted-foreground">
-                          {feature[plan.title.toLowerCase() as keyof typeof feature]}
-                        </div>
+                    </div>
+                    <div className="py-4">
+                      <div className="font-medium mb-4">Products</div>
+                      <div className="text-sm text-muted-foreground">
+                        {plan.title === "Starter" ? "10 Products" : 
+                         plan.title === "Growth" ? "50 Products" : 
+                         "Unlimited Products"}
                       </div>
-                    ))}
+                    </div>
+                    <div className="py-4">
+                      <div className="font-medium mb-4">Blog Posts</div>
+                      <div className="text-sm text-muted-foreground">
+                        {plan.title === "Starter" ? "10 Blog Posts" : 
+                         plan.title === "Growth" ? "50 Blog Posts" : 
+                         "Unlimited Blog Posts"}
+                      </div>
+                    </div>
+                    <div className="py-4">
+                      <div className="font-medium mb-4">Storage</div>
+                      <div className="text-sm text-muted-foreground">
+                        {plan.title === "Starter" ? "1024 MB Storage" : 
+                         plan.title === "Growth" ? "5120 MB Storage" : 
+                         "Unlimited Storage"}
+                      </div>
+                    </div>
+                    <div className="py-4">
+                      <div className="font-medium mb-4">Support</div>
+                      <div className="text-sm text-muted-foreground">
+                        {plan.title === "Starter" ? "Basic Support" : 
+                         plan.title === "Growth" ? "Priority Support" : 
+                         "Advanced Support"}
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
