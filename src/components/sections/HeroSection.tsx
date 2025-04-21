@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <HeroWithMockup
       title="Create Your Dream Beauty Brand"
-      description="Launch your beauty brand in minutes, not months. Our AI-powered platform makes it easy to bring your vision to life."
+      description="Launch your beauty brand in minutes, not months."
       primaryCta={{
         text: "Get Started",
         href: "#waitlist",
