@@ -74,11 +74,12 @@ const plans = {
   enterprise: {
     title: "Enterprise Plan",
     subtitle: "With your custom Android and iOS App!",
-    price: "₹3,499",
+    price: "₹39,999",
     buttonText: "Buy Now",
-    buttonIcon: <MoveRight className="w-4 h-4" />,
+    buttonIcon: <MoveRight className="h-4 w-4" />,
     variant: "default" as const,
-    highlighted: true
+    highlighted: true,
+    billingPeriod: "/year" as const
   }
 };
 
@@ -222,8 +223,8 @@ function Pricing() {
                     "With your custom Android and iOS App!"
                   </p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-gray-800">₹3,499</span>
-                    <span className="text-gray-500">/mo</span>
+                    <span className="text-4xl font-bold text-gray-800">₹39,999</span>
+                    <span className="text-gray-500">/year</span>
                   </div>
                   <Button 
                     variant="outline" 
