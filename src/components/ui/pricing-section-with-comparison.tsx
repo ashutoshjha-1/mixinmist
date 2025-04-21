@@ -23,7 +23,14 @@ const plans = {
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "default" as const,
-      highlighted: true
+      highlighted: true,
+      features: {
+        pages: "50 Pages",
+        products: "50 Products",
+        blogPosts: "50 Blog Posts",
+        storage: "5120 MB Storage",
+        support: "Priority Support"
+      }
     },
     {
       title: "Business",
@@ -142,72 +149,54 @@ function Pricing() {
               </ToggleGroup>
             </div>
 
-            {/* Main pricing grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
               {plans[billingCycle].map((plan) => (
-                <div
+                <div 
                   key={plan.title}
-                  className={`rounded-xl p-6 flex flex-col ${
-                    plan.highlighted ? "bg-black text-white" : "bg-white border-2"
-                  }`}
+                  className={`
+                    rounded-2xl p-6 sm:p-8 relative flex flex-col 
+                    ${plan.highlighted ? 'bg-[#F1F0FB] border-2 border-[#9b87f5] shadow-xl scale-105' : 'bg-white border border-gray-200'}
+                    transition-all duration-300 hover:shadow-lg
+                  `}
                 >
-                  <h3 className="text-2xl font-semibold mb-4">{plan.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-8">{plan.subtitle}</p>
-                  
-                  <div className="flex items-baseline gap-1 mb-8">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-sm text-muted-foreground">/{billingCycle === "monthly" ? "month" : "year"}</span>
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold text-[#8E9196]">{plan.title}</h3>
+                    {plan.highlighted && (
+                      <span className="bg-[#9b87f5]/10 text-[#9b87f5] px-3 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    )}
                   </div>
-
-                  <Button
-                    variant={plan.variant}
-                    className={`w-full ${plan.highlighted ? "bg-white text-black hover:bg-gray-100" : ""}`}
+                  
+                  <p className="text-[#8E9196] mb-6 italic">{plan.subtitle}</p>
+                  
+                  <div className="flex items-baseline mb-6">
+                    <span className="text-4xl font-bold text-[#8E9196]">{plan.price}</span>
+                    <span className="text-[#8E9196] text-sm ml-1">
+                      /{billingCycle === "monthly" ? "month" : "year"}
+                    </span>
+                  </div>
+                  
+                  <Button 
+                    variant={plan.highlighted ? "default" : "outline"} 
+                    className="w-full mb-6"
                   >
                     {plan.buttonText} {plan.buttonIcon}
                   </Button>
-
-                  {/* Features list */}
-                  <div className="mt-8 space-y-6">
-                    <div className="py-4">
-                      <div className="font-medium mb-4">Pages</div>
-                      <div className="text-sm text-muted-foreground">
-                        {plan.title === "Starter" ? "10 Pages" : 
-                         plan.title === "Growth" ? "50 Pages" : 
-                         "Unlimited Pages"}
+                  
+                  <div className="space-y-4">
+                    {[
+                      { label: "Pages", value: plan.features.pages },
+                      { label: "Products", value: plan.features.products },
+                      { label: "Blog Posts", value: plan.features.blogPosts },
+                      { label: "Storage", value: plan.features.storage },
+                      { label: "Support", value: plan.features.support }
+                    ].map(({ label, value }) => (
+                      <div key={label} className="flex justify-between border-b pb-2 last:border-b-0">
+                        <span className="text-[#8E9196] font-medium">{label}</span>
+                        <span className="text-[#8E9196]">{value}</span>
                       </div>
-                    </div>
-                    <div className="py-4">
-                      <div className="font-medium mb-4">Products</div>
-                      <div className="text-sm text-muted-foreground">
-                        {plan.title === "Starter" ? "10 Products" : 
-                         plan.title === "Growth" ? "50 Products" : 
-                         "Unlimited Products"}
-                      </div>
-                    </div>
-                    <div className="py-4">
-                      <div className="font-medium mb-4">Blog Posts</div>
-                      <div className="text-sm text-muted-foreground">
-                        {plan.title === "Starter" ? "10 Blog Posts" : 
-                         plan.title === "Growth" ? "50 Blog Posts" : 
-                         "Unlimited Blog Posts"}
-                      </div>
-                    </div>
-                    <div className="py-4">
-                      <div className="font-medium mb-4">Storage</div>
-                      <div className="text-sm text-muted-foreground">
-                        {plan.title === "Starter" ? "1024 MB Storage" : 
-                         plan.title === "Growth" ? "5120 MB Storage" : 
-                         "Unlimited Storage"}
-                      </div>
-                    </div>
-                    <div className="py-4">
-                      <div className="font-medium mb-4">Support</div>
-                      <div className="text-sm text-muted-foreground">
-                        {plan.title === "Starter" ? "Basic Support" : 
-                         plan.title === "Growth" ? "Priority Support" : 
-                         "Advanced Support"}
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -216,7 +205,6 @@ function Pricing() {
         </div>
       </div>
 
-      {/* Enterprise Section */}
       <div className="w-full py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
