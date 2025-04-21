@@ -1,4 +1,3 @@
-
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
@@ -155,11 +154,15 @@ const Index = () => {
               <div className="relative mx-auto max-w-6xl">
                 {/* Glass card for the dashboard preview */}
                 <div className="glass-card hover-lift rounded-2xl p-3 shadow-2xl">
-                  <img 
-                    src="/lovable-uploads/9ef6c83b-5828-4a70-8324-58153362da1f.png" 
-                    alt="MIXINMIST Seller Dashboard Interface"
-                    className="w-full rounded-xl shadow-sm"
-                  />
+                  <div className="relative w-full overflow-hidden rounded-xl border border-white/20 bg-gray-900/5 backdrop-blur-sm">
+                    <img 
+                      src="/lovable-uploads/8dabbfae-7a71-4668-82cf-a472e738ad7d.png"
+                      alt="MIXINMIST Seller Dashboard Interface"
+                      className="w-full rounded-lg shadow-sm"
+                    />
+                    {/* Frame overlay */}
+                    <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-white/10"></div>
+                  </div>
                 </div>
                 
                 {/* Decorative elements */}
