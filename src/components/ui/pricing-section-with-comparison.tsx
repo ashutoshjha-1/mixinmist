@@ -1,4 +1,3 @@
-
 import { MoveRight, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -157,8 +156,10 @@ function Pricing() {
 
   return (
     <>
-      <div className="w-full py-20 bg-black text-white">
-        <div className="container mx-auto px-4">
+      <div className="w-full py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-50/30 to-white/80 opacity-50 pointer-events-none" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex text-center justify-center items-center gap-4 flex-col">
             <Badge className="bg-gray-700 text-white">Pricing</Badge>
             <div className="flex gap-2 flex-col">
@@ -192,10 +193,11 @@ function Pricing() {
                   key={plan.title}
                   className={`
                     rounded-2xl p-6 sm:p-8 relative flex flex-col 
+                    bg-white border border-gray-100 shadow-lg
                     ${plan.highlighted 
-                      ? 'bg-gray-800 border-2 border-gray-700 shadow-xl scale-105' 
-                      : 'bg-gray-900 border border-gray-800'}
-                    transition-all duration-300 hover:shadow-lg
+                      ? 'border-primary/20 shadow-primary/10 scale-105' 
+                      : 'border-gray-100'}
+                    transition-all duration-300 hover:shadow-xl
                   `}
                 >
                   <div className="flex justify-between items-start mb-4">
@@ -248,10 +250,12 @@ function Pricing() {
         </div>
       </div>
 
-      <div className="w-full py-20 bg-black">
-        <div className="container mx-auto px-4">
+      <div className="w-full py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-purple-50/30 opacity-50 pointer-events-none" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 relative overflow-hidden rounded-2xl shadow-lg bg-gray-900 border border-gray-800">
+            <Card className="p-8 relative overflow-hidden rounded-2xl shadow-lg bg-white border border-gray-100">
               <div className="flex flex-col md:flex-row justify-between gap-8">
                 <div className="space-y-4 flex-1">
                   <div className="flex items-center gap-2">
@@ -308,4 +312,3 @@ function Pricing() {
 }
 
 export { Pricing };
-
