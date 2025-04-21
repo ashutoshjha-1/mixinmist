@@ -1,3 +1,4 @@
+
 import { MoveRight, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -14,7 +15,14 @@ const plans = {
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "outline" as const,
-      highlighted: false
+      highlighted: false,
+      features: {
+        pages: "10 Pages",
+        products: "10 Products",
+        blogPosts: "10 Blog Posts",
+        storage: "1024 MB Storage",
+        support: "Basic Support"
+      }
     },
     {
       title: "Growth",
@@ -39,7 +47,14 @@ const plans = {
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "outline" as const,
-      highlighted: false
+      highlighted: false,
+      features: {
+        pages: "Unlimited Pages",
+        products: "Unlimited Products",
+        blogPosts: "Unlimited Blog Posts",
+        storage: "Unlimited Storage",
+        support: "Advanced Support"
+      }
     }
   ],
   yearly: [
@@ -50,7 +65,14 @@ const plans = {
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "outline" as const,
-      highlighted: false
+      highlighted: false,
+      features: {
+        pages: "10 Pages",
+        products: "10 Products",
+        blogPosts: "10 Blog Posts",
+        storage: "1024 MB Storage",
+        support: "Basic Support"
+      }
     },
     {
       title: "Growth",
@@ -59,7 +81,14 @@ const plans = {
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "default" as const,
-      highlighted: true
+      highlighted: true,
+      features: {
+        pages: "50 Pages",
+        products: "50 Products",
+        blogPosts: "50 Blog Posts",
+        storage: "5120 MB Storage",
+        support: "Priority Support"
+      }
     },
     {
       title: "Business",
@@ -68,7 +97,14 @@ const plans = {
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "outline" as const,
-      highlighted: false
+      highlighted: false,
+      features: {
+        pages: "Unlimited Pages",
+        products: "Unlimited Products",
+        blogPosts: "Unlimited Blog Posts",
+        storage: "Unlimited Storage",
+        support: "Advanced Support"
+      }
     }
   ],
   enterprise: {
@@ -124,9 +160,9 @@ function Pricing() {
       <div className="w-full py-20">
         <div className="container mx-auto px-4">
           <div className="flex text-center justify-center items-center gap-4 flex-col">
-            <Badge className="bg-black text-white">Pricing</Badge>
+            <Badge className="bg-[#9b87f5] text-white">Pricing</Badge>
             <div className="flex gap-2 flex-col">
-              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-bold text-black">
+              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-bold text-[#8E9196]">
                 Simple, transparent pricing
               </h2>
               <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
@@ -180,25 +216,27 @@ function Pricing() {
                   
                   <Button 
                     variant={plan.highlighted ? "default" : "outline"} 
-                    className="w-full mb-6"
+                    className={`w-full mb-6 ${plan.highlighted ? 'bg-[#9b87f5] hover:bg-[#9b87f5]/90' : ''}`}
                   >
                     {plan.buttonText} {plan.buttonIcon}
                   </Button>
                   
-                  <div className="space-y-4">
-                    {[
-                      { label: "Pages", value: plan.features.pages },
-                      { label: "Products", value: plan.features.products },
-                      { label: "Blog Posts", value: plan.features.blogPosts },
-                      { label: "Storage", value: plan.features.storage },
-                      { label: "Support", value: plan.features.support }
-                    ].map(({ label, value }) => (
-                      <div key={label} className="flex justify-between border-b pb-2 last:border-b-0">
-                        <span className="text-[#8E9196] font-medium">{label}</span>
-                        <span className="text-[#8E9196]">{value}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {plan.features && (
+                    <div className="space-y-4">
+                      {[
+                        { label: "Pages", value: plan.features.pages },
+                        { label: "Products", value: plan.features.products },
+                        { label: "Blog Posts", value: plan.features.blogPosts },
+                        { label: "Storage", value: plan.features.storage },
+                        { label: "Support", value: plan.features.support }
+                      ].map(({ label, value }) => (
+                        <div key={label} className="flex justify-between border-b pb-2 last:border-b-0">
+                          <span className="text-[#8E9196] font-medium">{label}</span>
+                          <span className="text-[#8E9196]">{value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
