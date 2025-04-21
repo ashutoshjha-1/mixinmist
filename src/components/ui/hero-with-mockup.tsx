@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Mockup } from "@/components/ui/mockup"
@@ -34,9 +33,9 @@ export function HeroWithMockup({
       asChild
       size="lg"
       className={cn(
-        "bg-gradient-to-b from-brand to-brand/90 dark:from-brand/90 dark:to-brand/80",
-        "hover:from-brand/95 hover:to-brand/85 dark:hover:from-brand/80 dark:hover:to-brand/70",
-        "text-white shadow-lg",
+        "bg-black text-white",
+        "hover:bg-black/90",
+        "shadow-lg",
         "transition-all duration-300",
       )}
     >
