@@ -39,7 +39,7 @@ const plans = {
     {
       title: "Starter",
       subtitle: "Perfect for beginners taking their first steps!",
-      price: "₹9,999",
+      price: "₹8,999",
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "outline" as const,
@@ -48,7 +48,7 @@ const plans = {
     {
       title: "Growth",
       subtitle: "For businesses expanding their digital footprint!",
-      price: "₹10,999",
+      price: "₹9,999",
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "default" as const,
@@ -57,7 +57,7 @@ const plans = {
     {
       title: "Business",
       subtitle: "Targeted for established businesses aiming for growth!",
-      price: "₹21,999",
+      price: "₹19,999",
       buttonText: "Buy Now",
       buttonIcon: <MoveRight className="w-4 h-4" />,
       variant: "outline" as const,
