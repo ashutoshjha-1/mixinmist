@@ -156,17 +156,17 @@ function Pricing() {
 
   return (
     <>
-      <div className="w-full py-20 bg-white relative overflow-hidden">
+      <div className="w-full py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-50/30 to-white/80 opacity-50 pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex text-center justify-center items-center gap-4 flex-col">
-            <Badge className="bg-gray-700 text-white">Pricing</Badge>
+            <Badge className="bg-black text-white">Pricing</Badge>
             <div className="flex gap-2 flex-col">
-              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-bold text-gray-200">
+              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-bold text-black">
                 Simple, transparent pricing
               </h2>
-              <p className="text-lg leading-relaxed tracking-tight text-gray-400 max-w-xl text-center">
+              <p className="text-lg leading-relaxed tracking-tight text-gray-600 max-w-xl text-center">
                 Choose the perfect plan for your business
               </p>
             </div>
@@ -176,12 +176,12 @@ function Pricing() {
                 type="single"
                 value={billingCycle}
                 onValueChange={(value) => value && setBillingCycle(value as "monthly" | "yearly")}
-                className="bg-gray-800 p-1 rounded-full"
+                className="bg-black p-1 rounded-full"
               >
-                <ToggleGroupItem value="monthly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-700">
+                <ToggleGroupItem value="monthly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-800 text-white">
                   Monthly
                 </ToggleGroupItem>
-                <ToggleGroupItem value="yearly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-700">
+                <ToggleGroupItem value="yearly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-800 text-white">
                   Yearly
                 </ToggleGroupItem>
               </ToggleGroup>
@@ -195,25 +195,25 @@ function Pricing() {
                     rounded-2xl p-6 sm:p-8 relative flex flex-col 
                     bg-white border border-gray-100 shadow-lg
                     ${plan.highlighted 
-                      ? 'border-primary/20 shadow-primary/10 scale-105' 
-                      : 'border-gray-100'}
+                      ? 'border-black shadow-xl scale-105' 
+                      : 'border-gray-200'}
                     transition-all duration-300 hover:shadow-xl
                   `}
                 >
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-white">{plan.title}</h3>
+                    <h3 className="text-2xl font-bold text-black">{plan.title}</h3>
                     {plan.highlighted && (
-                      <span className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-black text-white px-3 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
                     )}
                   </div>
                   
-                  <p className="text-gray-400 mb-6 italic">{plan.subtitle}</p>
+                  <p className="text-gray-600 mb-6 italic">{plan.subtitle}</p>
                   
                   <div className="flex items-baseline mb-6">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 text-sm ml-1">
+                    <span className="text-4xl font-bold text-black">{plan.price}</span>
+                    <span className="text-gray-600 text-sm ml-1">
                       /{billingCycle === "monthly" ? "month" : "year"}
                     </span>
                   </div>
@@ -221,8 +221,8 @@ function Pricing() {
                   <Button 
                     variant={plan.highlighted ? "default" : "outline"} 
                     className={`w-full mb-6 ${plan.highlighted 
-                      ? 'bg-white text-black hover:bg-gray-200' 
-                      : 'bg-gray-800 text-white hover:bg-gray-700'}`}
+                      ? 'bg-black text-white hover:bg-gray-800' 
+                      : 'bg-white text-black border-2 border-black hover:bg-gray-50'}`}
                   >
                     {plan.buttonText} {plan.buttonIcon}
                   </Button>
@@ -236,9 +236,9 @@ function Pricing() {
                         { label: "Storage", value: plan.features.storage },
                         { label: "Support", value: plan.features.support }
                       ].map(({ label, value }) => (
-                        <div key={label} className="flex justify-between border-b border-gray-700 pb-2 last:border-b-0">
-                          <span className="text-gray-300 font-medium">{label}</span>
-                          <span className="text-white">{value}</span>
+                        <div key={label} className="flex justify-between border-b border-gray-200 pb-2 last:border-b-0">
+                          <span className="text-gray-600 font-medium">{label}</span>
+                          <span className="text-black">{value}</span>
                         </div>
                       ))}
                     </div>
@@ -250,56 +250,42 @@ function Pricing() {
         </div>
       </div>
 
-      <div className="w-full py-20 bg-white relative overflow-hidden">
+      <div className="w-full py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-purple-50/30 opacity-50 pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 relative overflow-hidden rounded-2xl shadow-lg bg-white border border-gray-100">
+            <Card className="p-8 relative overflow-hidden rounded-2xl shadow-lg bg-white border border-gray-200">
               <div className="flex flex-col md:flex-row justify-between gap-8">
                 <div className="space-y-4 flex-1">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-3xl font-bold text-white">Enterprise Plan</h3>
+                    <h3 className="text-3xl font-bold text-black">Enterprise Plan</h3>
                     <span className="text-2xl">🔥</span>
                   </div>
-                  <p className="text-gray-400 italic">
-                    "With your custom Android and iOS App!"
+                  <p className="text-gray-600 italic">
+                    With your custom Android and iOS App!
                   </p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-white">₹39,999</span>
-                    <span className="text-gray-400">/year</span>
+                    <span className="text-4xl font-bold text-black">₹39,999</span>
+                    <span className="text-gray-600">/year</span>
                   </div>
                   <Button 
                     variant="outline" 
-                    className="w-full md:w-auto bg-gray-800 text-white border-gray-700 hover:bg-gray-700"
+                    className="w-full md:w-auto bg-black text-white hover:bg-gray-800"
                   >
                     Buy Now
                   </Button>
                 </div>
                 
                 <div className="flex-1">
-                  <h4 className="font-semibold mb-4 text-white">Everything in Business, plus:</h4>
+                  <h4 className="font-semibold mb-4 text-black">Everything in Business, plus:</h4>
                   <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-300">Custom Android App</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-300">Custom iOS App</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-300">Dedicated Account Manager</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-300">Priority 24/7 Support</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-300">Custom Integrations</span>
-                    </li>
+                    {["Custom Android App", "Custom iOS App", "Dedicated Account Manager", "Priority 24/7 Support", "Custom Integrations"].map((feature) => (
+                      <li key={feature} className="flex items-center gap-2">
+                        <Check className="h-5 w-5 text-green-500" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
