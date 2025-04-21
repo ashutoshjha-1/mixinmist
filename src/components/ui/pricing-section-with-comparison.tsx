@@ -140,6 +140,7 @@ function Pricing() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-7xl">
+            {/* Features Column */}
             <div className="hidden md:block">
               <div className="h-[300px]"></div>
               <div className="mt-8 space-y-6">
@@ -152,7 +153,8 @@ function Pricing() {
               </div>
             </div>
 
-            {plans[billingCycle].map((plan, index) => (
+            {/* Plan Columns */}
+            {plans[billingCycle].map((plan) => (
               <div
                 key={plan.title}
                 className={`rounded-xl p-6 flex flex-col ${
@@ -174,6 +176,7 @@ function Pricing() {
                   {plan.buttonText} {plan.buttonIcon}
                 </Button>
 
+                {/* Mobile Features */}
                 <div className="md:hidden mt-8">
                   {features.map((feature) => (
                     <div key={feature.name} className="py-4 border-t">
@@ -195,6 +198,7 @@ function Pricing() {
                   ))}
                 </div>
 
+                {/* Desktop Features */}
                 <div className="hidden md:block mt-[300px] space-y-6">
                   {features.map((feature) => (
                     <div key={feature.name} className="py-4 flex justify-center">
