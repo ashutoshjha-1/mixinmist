@@ -1,3 +1,4 @@
+
 import { MoveRight, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -156,14 +157,14 @@ function Pricing() {
 
   return (
     <>
-      <div className="w-full py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-50/30 to-white/80 opacity-50 pointer-events-none" />
+      <div className="w-full py-20 bg-[#0a0a0a] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 opacity-50 pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex text-center justify-center items-center gap-4 flex-col">
-            <Badge className="bg-gray-700 text-white">Pricing</Badge>
+            <Badge className="bg-gray-800 text-white">Pricing</Badge>
             <div className="flex gap-2 flex-col">
-              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-bold text-gray-200">
+              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-bold text-white">
                 Simple, transparent pricing
               </h2>
               <p className="text-lg leading-relaxed tracking-tight text-gray-400 max-w-xl text-center">
@@ -176,12 +177,12 @@ function Pricing() {
                 type="single"
                 value={billingCycle}
                 onValueChange={(value) => value && setBillingCycle(value as "monthly" | "yearly")}
-                className="bg-gray-800 p-1 rounded-full"
+                className="bg-gray-900 p-1 rounded-full"
               >
-                <ToggleGroupItem value="monthly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-700">
+                <ToggleGroupItem value="monthly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-800 text-white">
                   Monthly
                 </ToggleGroupItem>
-                <ToggleGroupItem value="yearly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-700">
+                <ToggleGroupItem value="yearly" className="rounded-full px-6 py-2 data-[state=on]:bg-gray-800 text-white">
                   Yearly
                 </ToggleGroupItem>
               </ToggleGroup>
@@ -193,17 +194,17 @@ function Pricing() {
                   key={plan.title}
                   className={`
                     rounded-2xl p-6 sm:p-8 relative flex flex-col 
-                    bg-white border border-gray-100 shadow-lg
+                    bg-gray-900 border border-gray-800
                     ${plan.highlighted 
-                      ? 'border-primary/20 shadow-primary/10 scale-105' 
-                      : 'border-gray-100'}
-                    transition-all duration-300 hover:shadow-xl
+                      ? 'border-primary/40 shadow-xl scale-105' 
+                      : 'border-gray-800'}
+                    transition-all duration-300 hover:shadow-2xl
                   `}
                 >
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-2xl font-bold text-white">{plan.title}</h3>
                     {plan.highlighted && (
-                      <span className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-primary text-black px-3 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
                     )}
@@ -250,12 +251,12 @@ function Pricing() {
         </div>
       </div>
 
-      <div className="w-full py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-purple-50/30 opacity-50 pointer-events-none" />
+      <div className="w-full py-20 bg-[#0a0a0a] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 opacity-50 pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 relative overflow-hidden rounded-2xl shadow-lg bg-white border border-gray-100">
+            <Card className="p-8 relative overflow-hidden rounded-2xl shadow-2xl bg-gray-900 border border-gray-800">
               <div className="flex flex-col md:flex-row justify-between gap-8">
                 <div className="space-y-4 flex-1">
                   <div className="flex items-center gap-2">
@@ -312,3 +313,4 @@ function Pricing() {
 }
 
 export { Pricing };
+
