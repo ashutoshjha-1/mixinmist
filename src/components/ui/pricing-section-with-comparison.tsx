@@ -1,4 +1,4 @@
-import { MoveRight, Check } from "lucide-react";
+import { MoveRight, Check, AlertCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -21,7 +21,8 @@ const plans = {
         blogPosts: "10 Blog Posts",
         storage: "1024 MB Storage",
         support: "Basic Support"
-      }
+      },
+      note: "Please Note: You will get a subdomain based Website like yourname.mymini.store"
     },
     {
       title: "Growth",
@@ -71,7 +72,8 @@ const plans = {
         blogPosts: "10 Blog Posts",
         storage: "1024 MB Storage",
         support: "Basic Support"
-      }
+      },
+      note: "Please Note: You will get a subdomain based Website like yourname.mymini.store"
     },
     {
       title: "Growth",
@@ -241,6 +243,13 @@ function Pricing() {
                           <span className="text-black">{value}</span>
                         </div>
                       ))}
+                    </div>
+                  )}
+                  
+                  {plan.title === "Starter" && plan.note && (
+                    <div className="mt-4 flex items-center bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
+                      <AlertCircle className="h-5 w-5 mr-2 text-red-500" />
+                      {plan.note}
                     </div>
                   )}
                 </div>
