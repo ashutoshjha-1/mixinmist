@@ -8,22 +8,30 @@ export const HeroSection = () => {
   
   return (
     <section className="container relative mx-auto flex min-h-[100svh] flex-col items-center justify-center px-4 text-center py-[2px] overflow-hidden">
-      {/* Animated background layers */}
+      {/* Enhanced animated background layers */}
       <div className="absolute inset-0 -z-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-100/80 via-white/50 to-purple-50/80 animate-gradient" />
+        {/* Main gradient background with stronger colors */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-200/90 via-white/70 to-purple-100/90 animate-gradient" />
         
-        {/* Floating orbs */}
-        <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-purple-200/30 blur-3xl animate-float opacity-70" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-purple-300/20 blur-3xl animate-float" style={{ animationDelay: "-2s" }} />
-        <div className="absolute top-40 right-40 w-48 h-48 rounded-full bg-pink-200/20 blur-3xl animate-float" style={{ animationDelay: "-4s" }} />
+        {/* Larger, more vibrant floating orbs */}
+        <div className="absolute top-10 left-10 w-96 h-96 rounded-full bg-purple-300/50 blur-3xl animate-float opacity-80" />
+        <div className="absolute bottom-10 right-20 w-[30rem] h-[30rem] rounded-full bg-purple-400/40 blur-3xl animate-float-slow" />
+        <div className="absolute top-60 right-20 w-64 h-64 rounded-full bg-pink-300/40 blur-3xl animate-float-medium" />
+        
+        {/* Additional orbs for more visual interest */}
+        <div className="absolute bottom-40 left-40 w-72 h-72 rounded-full bg-indigo-200/50 blur-3xl animate-float-medium" style={{ animationDelay: "-3s" }} />
+        <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-pink-200/40 blur-3xl animate-pulse-slow" />
       </div>
 
-      {/* Mesh gradient overlay */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-200/20 via-transparent to-transparent opacity-80" />
+      {/* Enhanced mesh gradient overlay */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-300/30 via-transparent to-transparent opacity-90" />
+      
+      {/* Subtle grid pattern for texture */}
+      <div className="absolute inset-0 opacity-5 -z-10 bg-grid-pattern" />
       
       {/* Content */}
       <div className="relative flex flex-col items-center">
-        <span className="animate-fade-in flex items-center gap-2 rounded-full bg-gradient-to-r from-[#9b87f5]/20 via-[#D6BCFA]/20 to-[#E5DEFF]/20 px-8 py-2 text-sm font-extrabold text-[#1A1F2C] backdrop-blur-sm shadow-[0_4px_20px_rgba(155,135,245,0.15)] hover:shadow-[0_4px_25px_rgba(155,135,245,0.25)] transition-all duration-300 border border-[#9b87f5]/10">
+        <span className="animate-fade-in flex items-center gap-2 rounded-full bg-gradient-to-r from-[#9b87f5]/30 via-[#D6BCFA]/30 to-[#E5DEFF]/30 px-8 py-2 text-sm font-extrabold text-[#1A1F2C] backdrop-blur-sm shadow-[0_4px_20px_rgba(155,135,245,0.25)] hover:shadow-[0_4px_25px_rgba(155,135,245,0.35)] transition-all duration-300 border border-[#9b87f5]/20">
           <Sparkle className="h-4 w-4 text-[#8B5CF6]" />
           Create Your Dream Beauty Brand
           <Flower2 className="h-4 w-4 text-[#8B5CF6]" />
