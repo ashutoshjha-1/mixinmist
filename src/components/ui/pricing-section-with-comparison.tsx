@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
+// Update the plan object to use the correct variant types
 const plans = {
   monthly: [
     {
@@ -13,7 +14,8 @@ const plans = {
       description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
       buttonText: "Try it",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "outline"
+      variant: "outline" as const, // Add type assertion
+      highlighted: false
     },
     {
       title: "Growth",
@@ -21,7 +23,7 @@ const plans = {
       description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
       buttonText: "Try it",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "default",
+      variant: "default" as const, // Add type assertion
       highlighted: true
     },
     {
@@ -30,7 +32,8 @@ const plans = {
       description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
       buttonText: "Contact us",
       buttonIcon: <PhoneCall className="w-4 h-4" />,
-      variant: "outline"
+      variant: "outline" as const, // Add type assertion
+      highlighted: false
     }
   ],
   yearly: [
@@ -40,7 +43,8 @@ const plans = {
       description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
       buttonText: "Try it",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "outline"
+      variant: "outline" as const, // Add type assertion
+      highlighted: false
     },
     {
       title: "Growth",
@@ -48,7 +52,7 @@ const plans = {
       description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
       buttonText: "Try it",
       buttonIcon: <MoveRight className="w-4 h-4" />,
-      variant: "default",
+      variant: "default" as const, // Add type assertion
       highlighted: true
     },
     {
@@ -57,7 +61,8 @@ const plans = {
       description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
       buttonText: "Contact us",
       buttonIcon: <PhoneCall className="w-4 h-4" />,
-      variant: "outline"
+      variant: "outline" as const, // Add type assertion
+      highlighted: false
     }
   ]
 };
