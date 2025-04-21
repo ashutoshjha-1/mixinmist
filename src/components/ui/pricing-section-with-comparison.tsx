@@ -1,96 +1,105 @@
 
-import { useState } from "react";
-import { Check, Minus, MoveRight } from "lucide-react";
+import { Check, Minus, MoveRight, PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const plans = {
   monthly: [
     {
-      title: "Starter Plan 💡",
-      price: "₹899.00",
-      period: "/mo",
-      features: [
-        "Page 10",
-        "Product 10",
-        "Blog 10",
-        "Storage 1024 MB"
-      ],
-      description: "Please note you will get a subdomain based website like yourdomain.myprint.store",
-      badge: "Starter"
+      title: "Startup",
+      price: "$40",
+      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
+      buttonText: "Try it",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "outline"
     },
     {
-      title: "Growth Plan 🚀",
-      price: "₹999.00",
-      period: "/mo",
-      features: [
-        "Page 50",
-        "Product 50", 
-        "Blog 50",
-        "Storage 5120 MB"
-      ],
-      description: "For businesses expanding their digital footprint.",
-      badge: "Growth",
+      title: "Growth",
+      price: "$40",
+      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
+      buttonText: "Try it",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "default",
       highlighted: true
     },
     {
-      title: "Business Plan 🏆",
-      price: "₹1,999.00", 
-      period: "/mo",
-      features: [
-        "Page Unlimited",
-        "Product Unlimited",
-        "Blog Unlimited",
-        "Storage Unlimited"
-      ],
-      description: "Tailored for established businesses aiming for growth",
-      badge: "Business"
+      title: "Enterprise",
+      price: "$40",
+      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
+      buttonText: "Contact us",
+      buttonIcon: <PhoneCall className="w-4 h-4" />,
+      variant: "outline"
     }
   ],
   yearly: [
     {
-      title: "Starter Plan 💡",
-      price: "₹8,999.00",
-      period: "/yr",
-      features: [
-        "Page 20",
-        "Product 20",
-        "Blog 20",
-        "Storage 1024 MB"
-      ],
-      description: "Ideal for small businesses beginning their online journey.",
-      badge: "Starter"
+      title: "Startup",
+      price: "$400",
+      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
+      buttonText: "Try it",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "outline"
     },
     {
-      title: "Growth Plan 🚀",
-      price: "₹9,999.00",
-      period: "/yr",
-      features: [
-        "Page 50",
-        "Product 50",
-        "Blog 50",
-        "Storage 5120 MB"
-      ],
-      description: "For businesses expanding their digital footprint.",
-      badge: "Growth",
+      title: "Growth",
+      price: "$400",
+      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
+      buttonText: "Try it",
+      buttonIcon: <MoveRight className="w-4 h-4" />,
+      variant: "default",
       highlighted: true
     },
     {
-      title: "Business Plan 🏆",
-      price: "₹16,999.00",
-      period: "/yr",
-      features: [
-        "Page Unlimited",
-        "Product Unlimited",
-        "Blog Unlimited",
-        "Storage Unlimited"
-      ],
-      description: "Tailored for established businesses aiming for growth",
-      badge: "Business"
+      title: "Enterprise",
+      price: "$400",
+      description: "Our goal is to streamline SMB trade, making it easier and faster than ever for everyone and everywhere.",
+      buttonText: "Contact us",
+      buttonIcon: <PhoneCall className="w-4 h-4" />,
+      variant: "outline"
     }
   ]
 };
+
+const features = [
+  {
+    name: "SSO",
+    startup: true,
+    growth: true,
+    enterprise: true
+  },
+  {
+    name: "AI Assistant",
+    startup: false,
+    growth: true,
+    enterprise: true
+  },
+  {
+    name: "Version Control",
+    startup: false,
+    growth: true,
+    enterprise: true
+  },
+  {
+    name: "Members",
+    startup: "5 members",
+    growth: "25 members",
+    enterprise: "100+ members"
+  },
+  {
+    name: "Multiplayer Mode",
+    startup: false,
+    growth: true,
+    enterprise: true
+  },
+  {
+    name: "Orchestration",
+    startup: false,
+    growth: true,
+    enterprise: true
+  }
+];
 
 function Pricing() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
@@ -109,7 +118,6 @@ function Pricing() {
             </p>
           </div>
 
-          {/* Billing Toggle */}
           <div className="mt-8 mb-12">
             <ToggleGroup
               type="single"
@@ -126,53 +134,79 @@ function Pricing() {
             </ToggleGroup>
           </div>
 
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-7xl">
+            <div className="hidden md:block">
+              <div className="h-[300px]"></div>
+              <div className="mt-8 space-y-6">
+                <p className="font-semibold text-lg">Features</p>
+                {features.map((feature) => (
+                  <div key={feature.name} className="py-4">
+                    {feature.name}
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {plans[billingCycle].map((plan, index) => (
               <div
                 key={plan.title}
-                className={`relative flex flex-col p-6 bg-white rounded-2xl border-2 transition-all ${
-                  plan.highlighted
-                    ? "border-primary shadow-lg scale-105 z-10"
-                    : "border-border hover:border-primary/70 hover:shadow-md"
+                className={`rounded-xl p-6 flex flex-col ${
+                  plan.highlighted ? "bg-black text-white" : "bg-white"
                 }`}
               >
-                {plan.badge && (
-                  <Badge
-                    className={`absolute -top-3 left-1/2 -translate-x-1/2 ${
-                      plan.highlighted ? "bg-black text-white" : "bg-accent"
-                    }`}
-                  >
-                    {plan.badge}
-                  </Badge>
-                )}
-
-                <h3 className="text-2xl font-semibold mt-4">{plan.title}</h3>
-                <p className="text-sm text-muted-foreground mt-2">{plan.description}</p>
-
-                <div className="flex items-baseline gap-1 mt-6">
+                <h3 className="text-2xl font-semibold mb-4">{plan.title}</h3>
+                <p className="text-sm text-muted-foreground mb-8">{plan.description}</p>
+                
+                <div className="flex items-baseline gap-1 mb-8">
                   <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-sm text-muted-foreground">{plan.period}</span>
+                  <span className="text-sm text-muted-foreground">/{billingCycle === "monthly" ? "month" : "year"}</span>
                 </div>
 
-                <ul className="mt-8 space-y-4 flex-grow">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-primary" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
                 <Button
-                  variant={plan.highlighted ? "default" : "outline"}
-                  className={`mt-8 w-full ${
-                    plan.highlighted ? "bg-black hover:bg-black/90" : ""
-                  }`}
+                  variant={plan.variant}
+                  className={`w-full ${plan.highlighted ? "bg-white text-black hover:bg-gray-100" : ""}`}
                 >
-                  Get Started
-                  <MoveRight className="w-4 h-4 ml-2" />
+                  {plan.buttonText} {plan.buttonIcon}
                 </Button>
+
+                <div className="md:hidden mt-8">
+                  {features.map((feature) => (
+                    <div key={feature.name} className="py-4 border-t">
+                      <div className="font-medium mb-2">{feature.name}</div>
+                      <div className="flex justify-center">
+                        {typeof feature[plan.title.toLowerCase() as keyof typeof feature] === "string" ? (
+                          <span className="text-sm text-muted-foreground">
+                            {feature[plan.title.toLowerCase() as keyof typeof feature]}
+                          </span>
+                        ) : (
+                          feature[plan.title.toLowerCase() as keyof typeof feature] ? (
+                            <Check className="w-4 h-4 text-primary" />
+                          ) : (
+                            <Minus className="w-4 h-4 text-muted-foreground" />
+                          )
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="hidden md:block mt-[300px] space-y-6">
+                  {features.map((feature) => (
+                    <div key={feature.name} className="py-4 flex justify-center">
+                      {typeof feature[plan.title.toLowerCase() as keyof typeof feature] === "string" ? (
+                        <span className="text-sm text-muted-foreground">
+                          {feature[plan.title.toLowerCase() as keyof typeof feature]}
+                        </span>
+                      ) : (
+                        feature[plan.title.toLowerCase() as keyof typeof feature] ? (
+                          <Check className="w-4 h-4 text-primary" />
+                        ) : (
+                          <Minus className="w-4 h-4 text-muted-foreground" />
+                        )
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
