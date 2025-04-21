@@ -155,10 +155,16 @@ const Index = () => {
                 {/* Glass card for the dashboard preview */}
                 <div className="glass-card hover-lift rounded-2xl p-3 shadow-2xl">
                   <div className="relative w-full overflow-hidden rounded-xl border border-white/20 bg-gray-900/5 backdrop-blur-sm">
+                    {/* Browser-style dots */}
+                    <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
+                      <div className="h-3 w-3 rounded-full bg-red-500/80"></div>
+                      <div className="h-3 w-3 rounded-full bg-yellow-500/80"></div>
+                      <div className="h-3 w-3 rounded-full bg-green-500/80"></div>
+                    </div>
                     <img 
                       src="/lovable-uploads/8dabbfae-7a71-4668-82cf-a472e738ad7d.png"
                       alt="MIXINMIST Seller Dashboard Interface"
-                      className="w-full rounded-lg shadow-sm"
+                      className="w-full rounded-b-lg shadow-sm"
                     />
                     {/* Frame overlay */}
                     <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-white/10"></div>
