@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,6 +70,10 @@ export default {
           "0%": { "background-position": "0% 50%" },
           "50%": { "background-position": "100% 50%" },
           "100%": { "background-position": "0% 50%" }
+        },
+        aurora: {
+          "0%": { backgroundPosition: "50% 50%, 50% 50%" },
+          "100%": { backgroundPosition: "100% 50%, 100% 50%" }
         }
       },
       animation: {
@@ -80,6 +83,7 @@ export default {
         "fade-in-up": "fade-in-up 0.7s ease-out",
         float: "float 6s ease-in-out infinite",
         gradient: "gradient 8s ease infinite",
+        aurora: "aurora 20s linear infinite"
       },
     },
   },
