@@ -22,6 +22,7 @@ export const LampContainer = ({
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
+          viewport={{ once: false }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -38,6 +39,7 @@ export const LampContainer = ({
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
+          viewport={{ once: false }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -57,6 +59,7 @@ export const LampContainer = ({
         <motion.div
           initial={{ width: "8rem" }}
           whileInView={{ width: "16rem" }}
+          viewport={{ once: false }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -67,6 +70,7 @@ export const LampContainer = ({
         <motion.div
           initial={{ width: "15rem" }}
           whileInView={{ width: "30rem" }}
+          viewport={{ once: false }}
           transition={{
             delay: 0.3,
             duration: 0.8,

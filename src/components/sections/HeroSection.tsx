@@ -1,4 +1,3 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { motion } from "framer-motion";
@@ -12,6 +11,7 @@ export const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -22,6 +22,7 @@ export const HeroSection = () => {
           <motion.h1
             initial={{ opacity: 0.5, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
             transition={{
               delay: 0.3,
               duration: 0.8,
@@ -35,6 +36,7 @@ export const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-lg text-slate-300 max-w-xl"
           >
