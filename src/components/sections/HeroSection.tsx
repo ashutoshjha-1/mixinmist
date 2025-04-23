@@ -10,7 +10,7 @@ export const HeroSection = () => {
   return (
     <Dialog>
       <div className="container mx-auto px-4 py-16">
-        <Card className="w-full min-h-[600px] bg-black/[0.96] relative overflow-hidden">
+        <Card className="w-full min-h-[600px] relative overflow-hidden glass-card">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
@@ -19,17 +19,17 @@ export const HeroSection = () => {
           <div className="flex flex-col lg:flex-row h-full">
             {/* Left content */}
             <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
-              <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+              <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-600">
                 Create Your Dream Beauty Brand
               </h1>
-              <p className="mt-4 text-neutral-300 max-w-lg">
+              <p className="mt-4 text-neutral-600 max-w-lg">
                 Launch your beauty brand in minutes, not months. Build your brand with our all-in-one platform.
               </p>
               <div className="mt-8">
                 <DialogTrigger asChild>
                   <Button
                     size="lg"
-                    className="bg-white text-black hover:bg-white/90"
+                    className="bg-black text-white hover:bg-black/90"
                   >
                     Get Started
                   </Button>

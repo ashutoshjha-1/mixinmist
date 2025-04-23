@@ -20,7 +20,7 @@
 }
 
 .glass-card {
-  @apply backdrop-blur-md bg-white/95 border border-white/40 shadow-xl transition-all duration-300;
+  @apply backdrop-blur-sm bg-white/80 border border-white/40 shadow-xl transition-all duration-300;
   background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
 }
 
