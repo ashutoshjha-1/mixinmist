@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,8 +20,8 @@
 }
 
 .glass-card {
-  @apply backdrop-blur-[2px] bg-white/20 border border-white/20 shadow-lg transition-all duration-300;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+  @apply backdrop-blur-md bg-white/95 border border-white/40 shadow-xl transition-all duration-300;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
 }
 
 .hover-lift {

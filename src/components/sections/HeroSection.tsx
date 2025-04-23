@@ -1,53 +1,30 @@
 
-import { SplineScene } from "@/components/ui/spline";
-import { Card } from "@/components/ui/card";
-import { Spotlight } from "@/components/ui/spotlight";
+import { HeroWithMockup } from "@/components/ui/hero-with-mockup";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
     <Dialog>
-      <div className="container mx-auto px-4 py-16">
-        <Card className="w-full min-h-[600px] relative overflow-hidden glass-card">
-          <Spotlight
-            className="-top-40 left-0 md:left-60 md:-top-20"
-            fill="white"
-          />
-          
-          <div className="flex flex-col lg:flex-row h-full">
-            {/* Left content */}
-            <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-neutral-900">
-                Create Your Dream Beauty Brand
-              </h1>
-              <p className="mt-4 text-neutral-700 max-w-lg">
-                Launch your beauty brand in minutes, not months. Build your brand with our all-in-one platform.
-              </p>
-              <div className="mt-8">
-                <DialogTrigger asChild>
-                  <Button
-                    size="lg"
-                    className="bg-black text-white hover:bg-black/90"
-                  >
-                    Get Started
-                  </Button>
-                </DialogTrigger>
-              </div>
-            </div>
-
-            {/* Right content - adjusted to align robot at bottom */}
-            <div className="flex-1 relative min-h-[400px] flex items-end">
-              <SplineScene 
-                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                className="w-full h-[90%]"
-              />
-            </div>
-          </div>
-        </Card>
-      </div>
-
+      <HeroWithMockup
+        title="Create Your Dream Beauty Brand"
+        description="Launch your beauty brand in minutes, not months."
+        primaryCta={{
+          text: "Get Started",
+          href: "#",
+        }}
+        mockupImage={{
+          alt: "Beauty Platform Dashboard",
+          width: 1248,
+          height: 765,
+          src: "/lovable-uploads/9ef6c83b-5828-4a70-8324-58153362da1f.png"
+        }}
+        renderPrimaryCta={(props) => (
+          <DialogTrigger className="mx-auto">
+            {props}
+          </DialogTrigger>
+        )}
+      />
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-center text-xl font-bold">
